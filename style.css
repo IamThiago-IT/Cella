@@ -1,0 +1,153 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";/*@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";*/
+body{margin: 0;padding: 0;font-family: sans-serif;background-color: #fffafa;background-size: cover;}
+.login-box{width: 280px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);color: black;}
+.login-box h1{
+  float: left;
+  font-size: 30px;
+  border-bottom: 7px solid #035e9f;
+  margin-bottom: 50px;
+  padding: 0px 0px;
+}
+/*.card-footer{position: fixed;top: 90%;border-top: 1px solid #000;background-color: #035e7f;bottom: 0;left: 0;height: 10%;width: 100%;flex-shrink: none;}*/
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #035e7f;
+  text-align:center;
+}
+
+.imglogo{position: absolute;right:  5%;width:  25%;height: 85%;}
+.quadro{width: 30%;height: 59%;border:2px solid #035e9f;position: absolute;top: 20%;left: 39%;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;}
+
+.quadro1{
+	width: 25%;
+	height: 59%;
+	border:1px solid #035e9f;
+	position: absolute;
+    top: 28%;
+    left: 38%;
+	-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+}
+.h2{
+	width: 25%;
+	height: 59%;
+	position: absolute;
+    top: 30%;
+    left: 40%;
+	 font: normal 60% helvetica, tahoma, arial;
+}
+.btnn {
+  width: 100%;
+  background: none;
+  border: 1px solid #035e9f;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.textbox{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #035e9f;
+}
+.textbox input{
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+.btn {
+  width: 100%;
+  background: none;
+  border: 0px solid #035e9f;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+
+}
+.btn:hover {opacity: 1;}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+::-webkit-input-placeholder {color: black;font-size:15px}
+select {background-color: #DDF;font: normal 60% helvetica, tahoma, arial;color:black;}
+.img{width:100%;height:100%;}
+#appearance-select{-webkit-appearance: none;/* Remove estilo padrão do Chrome */-moz-appearance: none;/* Remove estilo padrão do FireFox */appearance: none;/* Remove estilo padrão do FireFox*/
+ background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */   background-position: 218px center;  /*Posição da imagem do background*/   width: 250px; /* Tamanho do select, maior que o tamanho da div "div-select" */   height:30px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */   border:1px solid #ddd;}
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/*body{font-family: 'Poppins', sans-serif;font-size: 16px;background: #eee;color:#666;}*/
+.login-container{height: 100vh;width: 100%;}
+.login-form{ /*login borda */
+  margin: 		auto;
+  width: 		370px;
+  padding: 		45px;
+  max-width: 	100%;
+ /* border-style: solid;*/
+  border-width: 1px;
+  border-radius: 15px 50px;
+  background-color: #d1e0eb;
+}
+#img_circular {
+	position: absolute;
+	top: 19%;
+    left: 45%;
+    border-radius: 180px;
+	border-style: solid;
+    border-width: 1px;
+	background-color: #d1e0eb;
+	width:150px;
+	height:150px;
+	opacity: 1.0;
+}
+.login-form .form-control{
+  font-size: 15px;
+  min-height: 48px;
+  font-weight: 500;
+}
+.login-form a{
+  text-decoration: none;
+  color:#fff;
+}
+.login-form a:hover{color:#035e7f;}
+.forgot-link{font-size: 13px;}
+.form-control:focus{border-color:#035e7f;box-shadow: 0 0 0 0.2rem rgba(3, 94, 127,.25);}
+.btn-custom{
+  background: #662b84;
+  border-color:#666;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 48px;
+}
+.btn-custom:focus,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:active:focus{
+  background: #035e7f;
+  border-color: #035e7f;
+  color:#fff;
+}
+.btn-custom:focus{
+  box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+}
+.arq{background-color:#035e7f;border-color: #035e7f;}
+.govoltar{position: absolute;top: 10%;left: 3%;background-color: #035e7f;color: white;border-radius: 4px;border: 2px solid #035e7f;}

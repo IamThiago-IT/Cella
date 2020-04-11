@@ -81,7 +81,7 @@
 			<div class="col-lg-12">
 				<div id='area_grafico'></div>
 				<div id='area_note'></div>
-				<form method="post" action="teste.php">
+				<form method="post" action="note_pdf.php">
 					<input type="hidden" name="chart_input" id="chart_input">
 					<input type="hidden" name="note_input" id="note_input">
 					

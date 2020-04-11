@@ -47,6 +47,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+				<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
 		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
@@ -98,7 +99,6 @@
 									<th>Número de Série</th>
 									<th>Número de Patrimônio</th>
 									<th>Modelo</th>
-									<th>Emprestar</th>
 									<th>Editar</th>
 									<th>Excluir</th>
 								</tr>
@@ -114,17 +114,17 @@
 										if($id_produto == $id_chave){
 											$editar = "#";
 											$excluir = "#";
-											$emp = "#";
+											//$emp = "#";
 										}
 										else{
 											$editar     = "<a href='editar_notebooks.php?id=$id_produto' 
 												title='Editar notebook $nome_note ?'>
 													<img src='imagens/editar.png' width='25px'>
 												</a>";
-											$emp = "<a href='emp_chaves.php?id=$id_produto&tipo=$tipo&nome=$nome_note&pagina=gerente_notebooks'><span class='glyphicon glyphicon-plus'></span></a>";
+											//$emp = "<a href='emp_chaves.php?id=$id_produto&tipo=$tipo&nome=$nome_note&pagina=gerente_notebooks'><span class='glyphicon glyphicon-plus'></span></a>";
 											$excluir = "<a id='delete-row' href='#' data-id='$id_produto' data-target='$nome_note' title='Excluir $nome_note ?'><img src='imagens/trash.png' width='25px'></a>";
 										}
-										echo "<tr><td>$nome_note</td><td>$n_patrimonio</td><td>$modelo</td><td>$emp</td><td  align=middle>$editar</td><td  align=middle>$excluir</td></tr>";
+										echo "<tr><td>$nome_note</td><td>$n_patrimonio</td><td>$modelo</td><td  align=middle>$editar</td><td  align=middle>$excluir</td></tr>";
 									}
 								?>
 							<tbody>
@@ -167,11 +167,15 @@
 			});
 		});
 		</script>
-		
-			<div class="footer" style="position: absolute; top: 1000px;">
-			<img src="../img/Senai_-_AZUL.jpg" class="imglogo">
-			&copy; Copyright 2019 - 2020
+				<footer class="sticky-footer bg-white"> 
+			<div class="container my-auto"> 
+				<div class="copyright text-center my-auto">
+					<span>Copyright © Your Website 2019</span>
+					<!--img src="../img/Senai_-_AZUL.jpg" style="position: absolute; top:95.5%;right:5%; width: 25%; height:5.5%;"-->
+				</div>
 			</div>
+		</footer>
+
 	
 	</body>
 	<script>

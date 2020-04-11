@@ -1,0 +1,511 @@
+[03-Apr-2020 21:55:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 16
+[03-Apr-2020 21:55:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:05:22 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 16
+[03-Apr-2020 22:05:22 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:07:06 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:07:07 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:09:29 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:09:31 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:09:39 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:11:21 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 22:11:23 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:21:22 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:24:20 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:24:52 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:24:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:25:06 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:25:28 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:26:15 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:26:18 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:26:43 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:26:46 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:27:07 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[03-Apr-2020 23:27:09 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:29:39 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:29:51 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:32:11 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:32:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:34:31 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:40:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:40:50 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:41:12 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:41:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:41:47 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:41:49 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:41:50 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:41:51 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:51:17 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:53:20 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:55:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:56:52 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 39
+[04-Apr-2020 11:56:52 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:56:54 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 39
+[04-Apr-2020 11:56:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:57:30 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 39
+[04-Apr-2020 11:57:30 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:57:32 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 39
+[04-Apr-2020 11:57:32 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:57:33 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 39
+[04-Apr-2020 11:57:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:57:45 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:57:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:58:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:58:28 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:59:27 America/Fortaleza] PHP Parse error:  syntax error, unexpected '}', expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 40
+[04-Apr-2020 11:59:28 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:59:29 America/Fortaleza] PHP Parse error:  syntax error, unexpected '}', expecting ')' in /home2/modain69/public_html/cella/Gerente/grafico/pegador_emp.php on line 40
+[04-Apr-2020 11:59:30 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 11:59:43 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 12:01:37 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 12:01:39 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 12:01:41 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 16:10:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 18:59:12 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:00:41 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:19:15 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:20:29 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:20:35 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:21:03 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:21:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:21:35 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:21:37 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:21:42 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:21:43 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:22:11 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:23:45 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:24:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:24:16 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:25:05 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:25:07 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:56:00 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[04-Apr-2020 19:56:03 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 11:15:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 11:16:47 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:47:28 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:58:51 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:58:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:59:32 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:59:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:59:36 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:59:40 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 16:59:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:00:27 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:00:35 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:00:37 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:00:52 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:01:06 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:01:10 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:01:22 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:03:08 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:04:03 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:04:05 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:04:07 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:04:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:04:27 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:04:29 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:07:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:09:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:10:20 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:18:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[06-Apr-2020 17:18:36 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 13:27:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 13:51:57 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:02:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:02:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:03:20 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:11:35 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:11:51 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:13:03 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:16:29 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:16:30 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:25:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:29:03 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:29:04 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:29:52 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:32:25 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:32:26 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:32:36 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:34:16 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:34:17 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:36:04 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:36:06 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 13
+[07-Apr-2020 14:37:20 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 16
+[07-Apr-2020 14:37:22 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Gerente/grafico/pegardados.php on line 16

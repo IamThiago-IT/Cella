@@ -62,7 +62,7 @@
 						<input type='hidden' name='id' value="<?php echo $id; ?>">
 							<div class="form-group">
 								<label>Número de Série</label>
-								<input type='number' class="form-control input-lg" name='nome' value='<?php echo $nome_c[0];?>' placeholder="Número de série" required  ><br>
+								<input type='number' min='1' class="form-control input-lg" name='nome' value='<?php echo $nome_c[0];?>' placeholder="Número de série" required  ><br>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:1%; padding-left:0px; padding-top:0px; padding-down:0px;" >
@@ -75,7 +75,10 @@
 									<input type='text' name='patrimonio' class="form-control input-lg" value='<?php echo $medidas;?>' placeholder="Medidas" required  >
 								</div>
 							</div>
-							<input type="submit" class="btn-default btn-lg btn-block" name="voltar" value="voltar" >
+							
+							<button type="button" class="btn-default btn-lg btn-block" data-toggle="modal" data-target="#exampleModa2">
+							  Voltar
+							</button>
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
 							  Editar
@@ -97,6 +100,26 @@
 								  <div class="modal-footer">
 									<button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">Fechar</button>
 									<input type="submit" class="btn btn-primary btn-lg btn-block" value="Editar" name="editar">
+								  </div>
+								</div>
+							  </div>
+							</div>
+							<!--Modal de voltar sem salvar-->
+						<div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair ?</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									  <span aria-hidden="true">&times;</span>
+									</button>
+								  </div>
+								  <div class="modal-body">
+									O item <?php echo "$nome"?> não será salvo?
+								  </div>
+								  <div class="modal-footer">
+									<input type="submit" class="btn btn-default btn-lg btn-block" value="Voltar" name="Voltar">
+										<a href="gerente_notebooks.php" class="btn btn-primary btn-lg btn-block">Continuar</a>
 								  </div>
 								</div>
 							  </div>

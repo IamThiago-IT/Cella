@@ -29,6 +29,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
 		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
@@ -106,10 +107,13 @@
 		});
 		</script>
 		
-			<div class="footer" style="position: absolute; top: 1000px;">
-			<img src="../img/Senai_-_AZUL.jpg" class="imglogo">
-			&copy; Copyright 2019 - 2020
+		<footer class="sticky-footer bg-white"> 
+			<div class="container my-auto"> 
+				<div class="copyright text-center my-auto">
+					<span>Copyright © Your Website 2019</span>
+				</div>
 			</div>
+		</footer>
 	
 	</body>
 	<script>

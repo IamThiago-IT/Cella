@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-?>
 <html lang="pt" dir="ltr">
 	<head>
 	
@@ -23,33 +20,38 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js" rel="stylesheet">
 		<style>
 			.botao{
-	background-color: #662b84;
-	color: #fff;
-	border-radius: 25px;
-	border: none;
-	width: 275px;
-	height: 48px;
-	font-size: 15px;
-	font-weight: 600;
-	min-height: 48px;
-	transition: 0.5s;
-	}
-	.botao:hover{background-color: #522b84;}
+				background-color: #662b84;
+				color: #fff;
+				border-radius: 25px;
+				border: none;
+				width: 275px;
+				height: 48px;
+				font-size: 15px;
+				font-weight: 600;
+				min-height: 48px;
+				transition: 0.5s;
+				}
+				.botao:hover{background-color: #522b84;}
 		</style>
 
 	</head>
 	<body>
 		<div class="d-flex justify-content-center align-items-center login-container">
 			<!--img src="img/Cella.png" id="img_circular" LOGO-->
-			<form action='esqueceu_2.php' method='POST' autocomplete='off' class="login-form text-center">
+			<form action='esqueceu_2.php' method='POST' id="formulario" class="login-form text-center">
 				<h3 class="mb-5 font-weight-light text-uppercase"><br>CELLA</h3><hr>
 				<h5>Esqueceu sua senha?</h5><hr>
 				<div class="form-group">
-					<input type="email" class="form-control rounded-pill form-control-lg"  placeholder="Coloque seu e-mail" name='email' style="border: none;" required id="senha">
+					<input type="email" name="email" id="email" required class="form-control rounded-pill form-control-lg"  placeholder="Digite seu e-mail" style="border: none;">
 				</div>
-				Digite um e-mail que você lembra de ter usado para entrar na sua conta, os e-mail's podem ir para na caixa de span então fique alerta
+					Digite seu e-mail, lhe enviaremos um código que você poderá usar para mudar a sua senha.
 				<b><input type='submit' name='salvar' value='Enviar' class="botao text-uppercase btn-block btn mt-5 rounded-pill btn-lg" style="color: #fff;"></b><br>
 			</form>
 
@@ -63,6 +65,37 @@
 			<img src="img/Senai_-_AZUL.jpg" class="imglogo" alt="Logo_senai" title="Logo_senai">
 			&copy; Copyright 2019 - 2020
 			</div>
-
+		
+		<script src="bootstrap/vendor/jquery/jquery.min.js"></script>
+		<script src="Gerente/js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
+		<script>
+            $("#formulario").validate({
+			   rules : {
+					email:{
+						required:true
+					}                                
+			   },
+			   messages:{
+					email:{
+						required:"<font style='color:red;'>É necessário informar um email</font>"
+					}    
+			   }
+		});  
+		/*jQuery(document).ready(function(){
+			jQuery('#formulario').submit(function(){
+				var dado = $(.email).val();
+				$.ajax({
+					type: "POST",
+					url: "esqueceu_2.php",
+					data: {datas: dado},
+					success: function( data )
+					{
+						alert( data );
+					}
+				});
+				return false;
+			});
+		});*/
+		</script>
 	</body>
 </html>

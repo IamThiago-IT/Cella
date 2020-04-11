@@ -1,7 +1,6 @@
 <?php
-
 try{ //tente
-		$fusca = new PDO("mysql:host=localhost;dbname=u277754222_cella","u277754222_cella123","cella123");
+		$fusca = new PDO("mysql:host=localhost;dbname=modain69_cella","modain69_cella","cella123");
 		//echo "Conexão efetuada com sucesso";
 	} 
 	catch(PDOException $e){ //Bloco correspondente ao try	
@@ -23,15 +22,15 @@ $grafico = array(
     ),
     'config' => array(
         'title' => 'Gráfico da quantidade de vezes que cada casa emprestou chaves em um mês',
-        'width' => 700,
-        'height' => 600
+        'width' => 500,
+        'height' => 400
     )
 );
 $j = 0;
 
-while ($obj = $itens->fetchObject()) {	
+while ($obj = $itens->fetchObject()) {
     $grafico['dados']['rows'][] = array('c' => array(
-        array('v' => $obj->nome_casa),
+		array('v' => $obj->nome_casa),
         array('v' => (int)$obj->quantidade)
     ));
 }

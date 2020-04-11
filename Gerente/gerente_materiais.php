@@ -16,21 +16,34 @@
 <html lang="pt-br">
 	<head>
 	<title>Cella-Lista de Materiais</title>
-		<meta charset="utf-8">
+	<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>	
-		<script>
-		</script>
-		
+		<link rel="stylesheet" href="../style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+		<style>
+			.glyphicon-duplicate{
+				font-size:30px;
+				color:#000;
+			}
+			.btn-icon {
+	color: Red;
+	font-size: 20px;
+                      }
+		  .btn-iconi {
+	color: blue;
+	font-size: 20px;
+                      }
+			
+		</style>
 	</head>
 	<body>
 		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
@@ -38,7 +51,8 @@
 				<div class="panel panel-default">
 					<div class="panel-heading" style="width: 100%;">
 					<h2>Lista de Materiais</h2>		<!--............Íncone não aumenta de tamanho...............-->
-					<a href='gerente_inserir.php'><img src="imagens/plus.png" title='Adicionar mais materiais' style="width: 25px; height: 25px; position: relative; left:95%; top: -30px" /></a>
+						<a href='material_pdf.php' style="width: 25px; height: 25px; position: relative; left:90%; top: -20px" title="Gerar PDF"><span aria-hidden="true" class="glyphicon glyphicon-duplicate"></span></a>
+						<a href='gerente_inserir.php'><img src="imagens/plus.png" title='Adicionar mais materiais' style="width: 25px; height: 25px; position: relative; left:95%; top: -30px" /></a>
 					</div>
 					<!-- /.panel-heading -->
 					<!-- Tabela -->
@@ -66,10 +80,10 @@
 												$obs        = $estoque['obs'];
 												$tipo        = $estoque['tipo'];
 												$editar     = "<a href='produtos_editar.php?id=$id_produto' 
-												title='Editar $nome $id_produto?'>
-													<img src='imagens/editar.png' width='25px'>
+												title='Editar $nome?'>
+													<i class='fas fa-edit btn-iconi'></i>
 												</a>";
-												$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_produto' data-target='$nome' title='Excluir $nome ?'><img src='imagens/trash.png' width='25px'></a>";
+												$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_produto' data-target='$nome' title='Excluir $nome ?'><i class='fas fa-trash-alt btn-icon'></i></a>";
 												echo "<tr><td>$nome</td><td>$medidas</td><td>$qntde</td><td class='center'>$minimo</td><td>$obs</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
 												
 											}
@@ -104,7 +118,13 @@
 		<script src="../bootstrap/dist/js/sb-admin-2.js"></script>
 
 		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-		
+		<footer class="sticky-footer bg-white"> 
+			<div class="container my-auto"> 
+				<div class="copyright text-center my-auto">
+					<span>Copyright © Your Website 2019</span>
+				</div>
+			</div>
+		</footer>
 		
 	</body>
 	<script>

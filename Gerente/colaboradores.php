@@ -60,7 +60,7 @@
 											<input type="hidden" name="id_professor">
 											<input type="text" placeholder="Nome do professor" name="nome" class="form-control input-lg" required >
 											<br>
-											<input type="number" name="num_matri" max="99999" placeholder="Número de matrícula" class="form-control input-lg" required >
+											<input type="number" name="num_matri" min='1' placeholder="Número de matrícula" class="form-control input-lg" required >
 											<br>
 											<select name='casa' class='form-control input-lg' required >
 											<?php
@@ -93,6 +93,7 @@
 									<th>Nome do professor</th>
 									<th>Número de Matrícula</th>
 									<th>Casa</th>
+									<th>Editar</th>
 									<th>Excluir</th>
 								</tr>
 							</thead>
@@ -103,8 +104,12 @@
 												$nome    = $user['nome_professor'];
 												$numero  = $user['numero'];
 												$casa    = $user['nomeCasa'];
+												$editar     = "<a href='editar_prof.php?id=$id' 
+												title='Editar $nome?'>
+													<img src='imagens/editar.png' width='25px'>
+												</a>";
 												$excluir = "<a id='delete-row' href='#' data-id='$id' data-target='$nome' title='Excluir $nome ?'><img src='imagens/trash.png' width='25px'></a>";
-												echo "<tr><td align=middle>$nome</td><td>$numero</td><td>$casa</td><td>$excluir</td></tr>";
+												echo "<tr><td align=middle>$nome</td><td>$numero</td><td>$casa</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
 												
 											}
 									?>
@@ -117,7 +122,6 @@
 			</div>
 			<!-- /.col-lg-12 -->
 		</div>
-		<h1 align="center">Sistema em manutenção</h1>
 				  <!-- /#page-wrapper -->
 		 <!-- /#wrapper -->
 
@@ -140,10 +144,13 @@
 
 		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
 		
-			<div class="footer" style="position: absolute; top: 1000px;">
-			<img src="../img/Senai_-_AZUL.jpg" class="imglogo">
-			&copy; Copyright 2019 - 2020
+		<footer class="sticky-footer bg-white"> 
+			<div class="container my-auto"> 
+				<div class="copyright text-center my-auto">
+					<span>Copyright © Your Website 2019</span>
+				</div>
 			</div>
+		</footer>
 		
 	</body>
 	<script>

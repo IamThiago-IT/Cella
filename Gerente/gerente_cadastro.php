@@ -27,6 +27,26 @@
 					document.getElementById("cont_num").value = dado.substring(0,tam-1);
 				}
 			}
+					
+		function limite(dado){
+				var tam = dado.length;
+				if(tam > 5){
+					alert('Você atingiu o númeor máximo de caracteres que podem ser digitadas nesse campo');
+					document.getElementById("numero").value = dado.substring(0,tam-1);
+				}
+			}
+			
+			function SomenteNumero(e){
+    var tecla=(window.event)?event.keyCode:e.which;   
+    if((tecla>47 && tecla<58))
+      return true;
+    else{
+    	if (tecla==8 || tecla==0) 
+        return true;
+	    else 
+        return false;
+    }
+}
 		</script>
 	</head>
 	<body>
@@ -41,12 +61,11 @@
 							<input type='text' class="form-control input-lg" name='nome' placeholder="Digite o nome" required  autofocus><br>
 						</div>
 						<div class="form-group">
-							<input type='text' class="form-control input-lg" name='email' placeholder="Digite o e-mail" required ><br>
+							<input type="email" name="email" id="email" required class="form-control input-lg"  placeholder="Digite o e-mail" required ><br>
 						</div >
 						<div class="form-row">
-							<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:1%; padding-left:0px; padding-top:25px; padding-down:0px;" >
-								<input type="number" id="cont_num" onkeyup="limite(this.value)" class="form-control input-lg" name="matri" placeholder="Digite o nº de matrícula" min="0" maxlength="5" required  />
-							</div>
+							<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:1%; padding-left:0px; padding-top:25px; padding-down:0px;">
+							<input type="text" id="cont_num"class="form-control input-lg"name="matri"onkeyup="limite(this.value)"onkeypress='return SomenteNumero(event)'placeholder="Digite o nº de matrícula" min="0" maxlength="5"required /></div>
 							<div class="form-group col-md-6" style="border: none; padding-right:1%; padding-left:0px; padding-top:0px; padding-down:0px;" >
 								<label>Selecione o tipo de usuário:</label>
 								<select name='funcionario' class="form-control input-lg">

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <?php
 	include "../conexao.php";
-	
+	session_start();
+	if(isset($_SESSION['item_salv'])){
+		echo "<script>alert('".$_SESSION['item_salv']."')</script>";
+		unset($_SESSION["item_salv"]);
+	}	
 	$chama_chaves    = "SELECT tb_produtos.*,tb_emprestimos.* FROM tb_produtos
 	LEFT JOIN tb_emprestimos ON tb_produtos.id_produto = tb_emprestimos.fk_produto
 	WHERE tb_produtos.tipo = 2 ";
@@ -44,6 +48,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
 		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
@@ -83,9 +88,8 @@
 							<thead>
 								<tr>
 									<th>Nome da sala</th>
-									<th>Excluir</th>
-									<th>Emprestar</th>
 									<th>Editar </th>
+									<th>Excluir</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -101,7 +105,7 @@
 											if($id_produto == $id_chave){
 												$editar = "#";
 												$excluir = "#";
-												$emp = "#";
+												//$emp = "#";
 											}
 											else{
 												$editar     = "<a href='chaves_editar.php?id=$id_produto' 
@@ -109,9 +113,9 @@
 													<img src='imagens/editar.png' width='25px'>
 												</a>";
 												$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_produto' data-target='$nome_sala' title='Excluir chave da sala $nome_sala ?'><img src='imagens/trash.png' width='25px'></a>";
-												$emp = "<a href='emp_chaves.php?id=$id_produto&tipo=$tipo&nome=$nome_sala&pagina=gerente_chaves'><span class='glyphicon glyphicon-plus'></span></a>";
+												//$emp = "<a href='emp_chaves.php?id=$id_produto&tipo=$tipo&nome=$nome_sala&pagina=gerente_chaves'><span class='glyphicon glyphicon-plus'></span></a>";
 											}
-											echo "<tr><td>$nome_sala</td><td align=middle>$excluir</td><td align=middle>$emp</td><td align=middle>$editar</td></tr>";
+											echo "<tr><td>$nome_sala</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
 										}
 								?>
 							</tbody>
@@ -151,13 +155,15 @@
 			});
 		});
 		</script>
-		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
-			<div class="footer" style="position: absolute; top: 1000px;">
-			<img src="../img/Senai_-_AZUL.jpg" class="imglogo">
-			&copy; Copyright 2019 - 2020
+		<footer class="sticky-footer bg-white"> 
+			<div class="container my-auto"> 
+				<div class="copyright text-center my-auto">
+					<span>Copyright © Your Website 2019</span>
+				</div>
 			</div>
-		</div>
+		</footer>
 </body>
+
 	<script>
     $("a#delete-row").click(function(){
         var id = $(this).attr("data-id");

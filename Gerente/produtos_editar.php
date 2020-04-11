@@ -84,6 +84,7 @@
 									<label>Estoque mínimo:</label>
 									<input type='text' name='minimo' class="form-control input-lg" value='<?php echo $minimo;?>'><br>
 								</div>
+							</div>
 							<div class="form-row">
 								<label>Observações:</label><br>
 								<input type="text" name="obs" value="<?php echo $obs;?>" class="form-control input-lg" placeholder="Observações" required >

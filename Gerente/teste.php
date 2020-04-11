@@ -7,7 +7,65 @@
 	$historico = $fusca->prepare($sql2);
 	$historico->execute();
 	$fusca = NULL;
-	$html= '<table width="100%" border=1>';
+	$html = '<html lang="pt-br">
+	<head>
+		<title>Relatório de Empréstimos</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Cella">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../bootstrap/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+		<link href="../bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+		   @page {
+				margin: 120px 50px 80px 50px;
+			}
+			#head{
+				background-color: #035e7f;
+				font-size: 25px;
+				text-align: center;
+				height: 110px;
+				width: 100%;
+				position: fixed;
+				top: -100px;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			 #corpo{
+				width: 600px;
+				position: relative;
+				margin: auto;
+			}
+			#footer {
+				position: fixed;
+				background-color:#035e7f;
+				color:white;
+				bottom: 0;
+				width: 100%;
+				text-align: right;
+				border-top: 1px solid gray;
+			}
+			#footer .page:after{ 
+				content: counter(page); 
+			}
+			.logo{width: 150px; height: 85px;}
+		</style></head>';
+	$html.= '<body>
+	<div id="head">
+		<img src="../img/logoBandeira.png" class="logo" alt="Logo" title="logo"> 
+	</div>';
+	$html.= '<main id="corpo">';
+	$html.= '<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">';
 	$html.= '<thead>';
 	$html.= '<tr>';
 	$html.= '<th>Laboratório</th>';
@@ -18,7 +76,7 @@
 	$html.= '</thead>';
 	
 	foreach($historico as $hist){
-		$html.= '<tbody>';
+		$html.= '<tbody class="tabela">';
 				$id_hist = $hist['id_emprestimo'];
 				$produto_hist = $hist['nome'];
 				$professor_hist = $hist['nome_professor'];
@@ -32,11 +90,14 @@
 		$html.= '</tbody>';
 	}
 	$html.= '</table>';
+	$html.= '</main>';
 	$html.= '<br>';
 	$html.= '<img src="' . $_POST['chart_input'] . '">';
 	$html.= '<br>';
 	$html.= '<img src="' . $_POST['note_input'] . '">';
-	
+	$footer='<div id="footer">
+            <p class="page">Página </p>
+        </div>';
 	
 	
 	$filename = "newpdffile.pdf";
@@ -49,7 +110,7 @@
 	$dompdf = new Dompdf();
 	
 	//$dompdf->loadHtml($html);
-	$dompdf->loadHtml('<h1>Relatório de empréstimo de chaves</h1>'.$html);
+	$dompdf->loadHtml('<h1>Relatório de empréstimo de chaves</h1>'.$html.$footer);
 	// (Optional) Setup the paper size and orientation
 	$dompdf->setPaper('A4');
 

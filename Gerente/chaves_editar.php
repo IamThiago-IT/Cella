@@ -18,7 +18,7 @@
 					WHERE
 					id_produto = ?";	
 		$editar = $fusca -> prepare($sql1);
-		$editar -> execute(array($nome,$patrimonio,$modelo,$id));
+		$editar -> execute(array($nome,$id));
 		$_SESSION['item_salv'] = "Chave editada!";
 		echo "<script>window.location.href = 'gerente_chaves.php';</script>";
 		$fusca = NULL;	
@@ -53,7 +53,9 @@
 								<label>Nome da Sala</label>
 								<input type='text' class="form-control input-lg" name='nome' value='<?php echo $nome;?>' placeholder="Número de série" required  ><br>
 							</div>
-							<input type="submit" class="btn-default btn-lg btn-block" name="voltar" value="voltar" >
+							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#exampleModa2">
+							  Voltar
+							</button>
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
 							  Editar
@@ -78,7 +80,26 @@
 								  </div>
 								</div>
 							  </div>
-							</div>							
+							</div>
+						<div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair ?</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									  <span aria-hidden="true">&times;</span>
+									</button>
+								  </div>
+								  <div class="modal-body">
+									O item <?php echo "$nome"?> não será salvo?
+								  </div>
+								  <div class="modal-footer">
+									<input type="submit" class="btn btn-default btn-lg btn-block" value="Voltar" name="Voltar">
+										<a href="gerente_chaves.php" class="btn btn-primary btn-lg btn-block">Continuar</a>
+								  </div>
+								</div>
+							  </div>
+							</div>														
 					</form>
 				</div>
 			</div>

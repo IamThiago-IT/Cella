@@ -11,14 +11,15 @@
 ?>
 <html lang="pt-br">
 
+	<html lang="pt-br">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="author" content="Cella">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="stylesheet" href="../style.css">
@@ -29,7 +30,10 @@
 			
 
 		</style>
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!--<script src="../bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- Bootstrap Core CSS -->
 		<link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,7 +48,6 @@
 
 		<!-- Custom CSS -->
 		<link href="../bootstrap/dist/css/sb-admin-2.css" rel="stylesheet">
-
 		<!-- Custom Fonts -->
 		<link href="../bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	</head>
@@ -52,11 +55,6 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button"class="navbar-toggle"data-toggle="collapse" data-target="#example-navbar-collapse"> <!-- Botão do Menu Hamburguer -->
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
 				  <a class="navbar-brand" href="home.php"><img src="../img/logoBandeira.png" class="logo" alt="Logo" title="logo">logo</a> <!-- Logo -->
 				</div>
 						

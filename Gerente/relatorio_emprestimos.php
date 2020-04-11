@@ -79,9 +79,10 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div id='area_grafico'></div>
+				<div id='area_note'></div>
 				<form method="post" action="teste.php">
 					<input type="hidden" name="chart_input" id="chart_input">
-					
+					<input type="hidden" name="note_input" id="note_input">
 			</div>
 			<div class="col-lg-12">
 				<button style="background-color:Red;" type="submit"><font color="White">Gerar PDF</font></button>

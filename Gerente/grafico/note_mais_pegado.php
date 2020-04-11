@@ -1,7 +1,6 @@
 <?php
-
 try{ //tente
-		$fusca = new PDO("mysql:host=localhost;dbname=u277754222_cella","u277754222_cella123","cella123");
+		$fusca = new PDO("mysql:host=localhost;dbname=modain69_cella","modain69_cella","cella123");
 		//echo "Conexão efetuada com sucesso";
 	} 
 	catch(PDOException $e){ //Bloco correspondente ao try	
@@ -9,10 +8,13 @@ try{ //tente
 		// verificar método echo $e->getCode(); 
 		echo $e->getMessage(); //método amplamente utilizado		
 	}
-	/*$sql = "SELECT tb_historico_emp.count(*), casa.* FROM tb_historico_emp
-	INNER JOIN casa ON tb_historico_emp.casa = casa.id_casa
-	WHERE tb_historico_emp.tipo_prod = 2";*/
-	$sql = "SELECT tb_produtos.nome, COUNT(tb_historico_emp.id_emprestimo) as quantidade, tb_historico_emp.fk_produto FROM tb_historico_emp INNER JOIN tb_produtos ON tb_produtos.id_produto = tb_historico_emp.fk_produto WHERE tb_historico_emp.tipo_prod = 3 GROUP BY fk_produto";
+	$sql = "SELECT COUNT(tb_produtos.id_produto) as quantidade, REPLACE(tb_tipos.descricao, 'notebook', 'Notebooks não emprestadas') as nome_casa 
+	from tb_produtos LEFT JOIN tb_emprestimos ON tb_produtos.id_produto = tb_emprestimos.fk_produto
+	INNER JOIN tb_tipos ON tb_produtos.tipo = tb_tipos.id_tipo
+	WHERE tb_produtos.tipo = 3 AND tb_emprestimos.fk_produto is NULL UNION
+	SELECT COUNT(tb_emprestimos.id_emprestimo) as quantidade, casa.nome_casa
+	FROM tb_emprestimos INNER JOIN casa ON casa.id_casa = tb_emprestimos.casa
+	WHERE tb_emprestimos.tipo_prod = 3 GROUP BY casa";
 	$itens = $fusca -> prepare($sql);
 	$itens -> execute();
 // Estrutura basica do grafico
@@ -25,16 +27,16 @@ $grafico = array(
         'rows' => array()
     ),
     'config' => array(
-        'title' => 'Gráfico das chaves mais pegas em um mês',
-        'width' => 700,
-        'height' => 600
+        'title' => 'Gráfico da quantidade de chaves que estão emprestadas e que estão no almoxarifado',
+        'width' => 500,
+        'height' => 400
     )
 );
 $j = 0;
 
-while ($obj = $itens->fetchObject()) {	
+while ($obj = $itens->fetchObject()) {
     $grafico['dados']['rows'][] = array('c' => array(
-        array('v' => $obj->nome),
+		array('v' => $obj->nome_casa),
         array('v' => (int)$obj->quantidade)
     ));
 }

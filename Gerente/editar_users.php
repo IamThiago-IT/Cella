@@ -39,59 +39,89 @@
 	?>
 <html lang="pt-br">
 	<head>
-		<title>Cella-Cadastro de usuários</title>
+		<title>Cella- Editar Colaboradores</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 		<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
-		<link href="../bootstrap/vendor/bootstrap/css/divs.css" rel="stylesheet">
-		<!--   Fundo rosa   <link rel="stylesheet" href="../style.css">   -->
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-		</head>
-		<style>
-		.form-control{
-			width: 20%;
-			}
-		.btn-primary{
-			width: 15%;
-			}
-	</style>
+		<link href="../bootstrap/vendor/bootstrap/css/divs.css" rel="stylesheet"> 
+    </head>
 	<body>
-	<br>
-	<br>
-	<hr>
-	<h3 align='center'>Editar usuario</h3>
-	<hr>
-	<center>
-		<form action="#" method="POST" class="editar">
-			<input type="hidden" name="id_prf" value="<?echo $id;?>">
-			<br><br><br><label>Nome:</label><br>
-			<input type="text" class="form-control" name="nome" value="<?php echo $nome;?>" required  ><br>
-			<br>
-			<label>E-mail:</label><br>
-			<input type="text" class="form-control" name="email" value="<?php echo $email;?>" required ><br>
-			<br>
-			<label style =" position:absolute;top:63%;left:41%;">Número:</label><br>
-			<input type="number" class="form-control" style ="position:absolute;top:67%;left:41%;width: 6%;" name="numero" value="<?php echo $numero;?>" required  ><br>
-			<br>
-			<label style =" position:absolute;top:63%;left:50%;">Cargo:</label><br>
-			<select class="form-control" name="tipo_user" style =" position:absolute;top:67%;left:50%;width:10%;"  ><br>
-			<?php
-				foreach($user as $u){
-					$id_tipo  = $u['tipo_usuario'];
-					$nome_usuario = $u['nome_usuario'];
-					if( $tipo  == $id_tipo)
-						echo "<option value='$tipo' selected>".$nome_tipo."</option>";
-					else
-						echo "<option value='$id_tipo'>".$nome_usuario."</option>";
-				}
-			?>
-			</select><br>
-			<br>
-			<input type="submit" class="btn btn-primary" name="editar" Value="Editar">
-		</form>
-	</center>
+		<br>
+		<br>
+		<div class="container" style="width:1000px">
+			<div class="row">
+				<div class="col-lg-12">
+					<form action='' method='POST' autocomplete='off' class="editar">
+						<input type="hidden" name="id_prf" value="<?echo $id;?>">
+						<h1 align='center'>Editar Colaborador(a) <?php echo $nome; ?></h1>
+						<br>
+						<div class="form-group">
+							<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:2%; padding-left:0px; padding-top:0px; padding-down:0px;" >
+								<label>Nome:</label>
+								<input type='text' class="form-control input-lg" name='nome' value='<?php echo $nome;?>' placeholder="Nome" required autofocus><br>
+							</div>
+							<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:0px; padding-left:0px; padding-top:0px; padding-down:0px;">
+								<label>E-mail:</label><br>
+								<input type="text"  class="form-control input-lg" name="email" value="<?php echo $email;?>" required ><br>
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:2%; padding-left:0px; padding-top:0px; padding-down:0px;" >
+								<label>Número:</label>
+								<input type="number" class="form-control input-lg" name="numero" value="<?php echo $numero;?>" required  ><br>
+							</div>
+							<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:0px; padding-left:0px; padding-top:0px; padding-down:0px;">
+								<label>Cargo:</label>
+								<select class="form-control input-lg" name="tipo_user" ><br>
+								<?php
+									foreach($user as $u){
+										$id_tipo  = $u['tipo_usuario'];
+										$nome_usuario = $u['nome_usuario'];
+										if( $tipo  == $id_tipo)
+											echo "<option value='$tipo' selected>".$nome_tipo."</option>";
+										elseif($id_tipo == 5)
+											'nada';
+										else
+											echo "<option value='$id_tipo'>".$nome_usuario."</option>";
+									}
+								?>
+								</select>
+							</div>
+						</div>
+						<br>
+						<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+							Editar
+						</button>
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Finalizar</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									  <span aria-hidden="true">&times;</span>
+									</button>
+								  </div>
+								  <div class="modal-body">
+									Tem certeza de que deseja realizar edição?
+								  </div>
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">Fechar</button>
+									<input type="submit" class="btn btn-primary" name="editar" Value="Editar">
+								  </div>
+								</div>
+							  </div>
+							</div>				
+					</form>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

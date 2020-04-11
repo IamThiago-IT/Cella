@@ -8,11 +8,9 @@
 	<head>
 	<title>Cella-Documentação</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -35,12 +33,13 @@
 	<hr>
 	<br>
 	<br>
-	<P><a href="Documentação.docx" download >Download - Documentação</a></P>
-	<P><a href="u277754222_cella.sql" download >Download - Banco de dados</a></P>
-	<P><a href="der.jpg" download >Download - DER</a></P>
-	<P><a href="mer.png" download >Download - MER</a></P>
-	<P><a href="UseCase_Diagram0.asta" download >Download - Casos de Uso</a></P>
-	
+	<ul>  
+	<li><a href="Documentação.docx" download >Download - Documentação</a><</li> 
+	<li><a href="u277754222_cella.sql" download >Download - Banco de dados</a></li> 
+	<li><a href="der.jpg" download >Download - DER</a></li> 
+	<li><a href="mer.png" download >Download - MER</a></li> 
+	<li><a href="UseCase_Diagram0.asta" download >Download - Casos de Uso</a></li> 
+	</ul> 
 	</body>
 
 	

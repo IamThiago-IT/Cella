@@ -2,7 +2,7 @@
 <?php	
 	include "../conexao.php";
 	include "menu_perfil.php";
-	include "index.php";
+
 	
 	session_start();
 	if($_SESSION["abrir"]!="YES"){
@@ -35,68 +35,165 @@
 
 		<title>Cella-Perfil</title>
 		<style>
-			.btn-success {
-			  color: #fff;
-			  background-color: #28a745;
-			  border-color: #28a745;
-			}
 
-			.btn-success:hover {
-			  color: #fff;
-			  background-color: #218838;
-			  border-color: #1e7e34;
-			  box-shadow: 0 0 6px rgba(35, 173, 278, 1);  
-			  
-			}
+/* Profile container */
+.profile {margin: 20px 0;}
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fffafa;
+}
 
-			.btn-success:focus, .btn-success.focus {
-			  color: #fff;
-			  background-color: #218838;
-			  border-color: #1e7e34;
-			  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
-			}
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
 
-			.btn-success.disabled, .btn-success:disabled {
-			  color: #fff;
-			  background-color: #28a745;
-			  border-color: #28a745;
-			}
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
 
-			.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
-			.show > .btn-success.dropdown-toggle {
-			  color: #fff;
-			  background-color: #1e7e34;
-			  border-color: #1c7430;
-			}
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
 
-			.btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
-			.show > .btn-success.dropdown-toggle:focus {
-			  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
-			}	
-			
-			article{
-				padding: 15px;
-				 border-top: 1px solid #ddd;
-			}
-			a:link{
-				text-decoration:none;
-				
-			}
-			a article:hover {
-			  background-color: gray;
-			}
-			
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+.profile-usermenu ul li.active a {color: #5b9bd1;background-color: #f6f9fb;border-left: 2px solid #5b9bd1;margin-left: -2px;}
+/* Profile Content */
+.profile-content{padding: 20px;min-height: 460px;}
 		</style>
 	</head>
-	<body>
-		<hr>
-		<h3 align='center'>Meu Usuário</h3>
-		<hr>
-		<div class="container" style="width:50%;">
-			<div class="row">
-				<div class="col-lg-12">
-							
-							<form action="editar_email.php" method="POST">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+				<br>
+				<br>
+				<br>
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						<?php
+						echo $professor;
+					?>
+					</div>
+					<div class="profile-usertitle-job">
+						<?php
+						echo	 $user;
+					?>
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Dados atuais</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li>
+							<a href="perfil.php">
+							<i class="glyphicon glyphicon-home"></i>
+							Perfil </a>
+						</li>
+						<li class="active">
+							<a href="meu_usuario.php">
+							<i class="glyphicon glyphicon-user"></i>
+							Configurações da conta </a>
+
+						</li>
+						<li>
+							<a href="editar_email.php"">
+							<i class="glyphicon glyphicon-ok"></i>
+							E-mail </a>
+						</li>
+						<li>
+							<a href="help.php">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+			   							<form action="editar_email.php" method="POST">
 							<h3 align="center">Editar email</h3><br><br>
 							<div class="col-6" style="border: none;">
 							<input type="submit" value="Editar" class="btn-success btn-block btn-lg" style="position: absolute; left: 25%; width: 50%; float: left;"></input>
@@ -114,21 +211,13 @@
 							<h4 align="center"><b>Nome de usuário</b><br><br><?php
 							echo $professor;
 							?></h4>
- 
-				</div>
-			</div>
+            </div>
 		</div>
-			
-					<button onclick="goBack()" class="govoltar">
-		<span class="glyphicon glyphicon-chevron-left"></span>
-		Voltar</button>
-			
-				
-			<div class="footer" style="position: absolute; top: 1000px;">
-			<img src="../img/Senai_-_AZUL.jpg" class="imglogo">
-			&copy; Copyright 2019 - 2020
-			</div>
-
-		
-	</body>
+	</div>
+</div>
+<center>
+</center>
+<br>
+<br>
+  </body>
 </html>

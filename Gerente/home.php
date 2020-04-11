@@ -22,9 +22,16 @@
 ?>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Cella">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="">
+		<meta name="author" content="">
 	<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
 	<link href="../bootstrap/vendor/bootstrap/css/divs.css" rel="stylesheet">
 	<title>Cella-Home</title>
@@ -39,13 +46,12 @@ btn-custom{
 }
 </style>
 <body>
-	<div class="container" style="width: 50%;">
-	<br><br><h3 align="center">Vamos começar,  <?php
+	<div class="container" style="width: 45%;">
+	<br><br><h3 align="center">Seja bem-vindo  <?php
 						echo $professor;
-					?> </h3><br><br>
+					?></h3><br>
 	<div class="row">
-	
-<a href="gerente_materiais.php" class="btn btn-primary btn-custom">
+<a href="gerente_materiais.php" class="btn btn-primary btn-custom" >
 <span class="fas fa-clipboard-list img-circle text-primary btn-icon"></span>
 Lista de materiais
 </a>
@@ -55,16 +61,23 @@ Emprestimos
 </a>
 <a href="lista_usuarios.php" class="btn btn-primary btn-custom">
 <span class="fas fa-users img-circle text-primary btn-icon"></span>
-Colaboladores
+Colaboradores
 </a>
 <a href="colaboradores.php" class="btn btn-primary btn-custom">
 <span class="fas fa-user-friends img-circle text-primary btn-icon"></span>
 Professores
 </a>
+<a href="../Meu_perfil/perfil.php" class="btn btn-primary btn-custom">
+<span class="fas fa-user img-circle text-primary btn-icon"></span>
+Perfil<font color=red>{Em testes}</font>
+</a>
 <a href="graficos_tudo.php" class="btn btn-primary btn-custom">
 <span class="fas fa-chart-pie img-circle text-primary btn-icon"></span>
 Gráficos
 </a>
+<a href="../CODEQR/qrcode.html" class="btn btn-primary btn-custom">
+<span class="fas fa-qrcode img-circle text-primary btn-icon"></span>
+QR Code{Em testes}</a>
 <a href="../Documentacao_BD/index.php" class="btn btn-primary btn-custom">
 <span class="fas fa-search img-circle text-primary btn-icon"></span>
 Documentação
@@ -73,13 +86,18 @@ Documentação
 <span class="fas fa-sign-out-alt img-circle text-primary btn-icon"></span>
 sair
 </a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>
 
 <!--Rodapé-->
-			<footer class="footer">
-			<img src="../img/Senai_-_AZUL.jpg" class="imglogo">
-			&copy; Copyright 2019 - 2020
-			</footer>
+		<footer class="footerone"> 
+					<span>&copy; Copyright 2019 - 2020</span>
+		</footer>
 <!--Rodapé-->
 
 </body>

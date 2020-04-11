@@ -111,7 +111,7 @@
 									<input type='number' min='1' name='quantidade' class="form-control input-lg" placeholder="Estoque inicial" required ><br>
 								</div>
 								<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:0px; padding-left:0px; padding-top:0px; padding-down:0px;">
-									<input type='number' class="form-control input-lg" placeholder="Mínimo" name='minimo' required >
+									<input type='number' min='1' class="form-control input-lg" placeholder="Mínimo" name='minimo'>
 									<small class="form-text text-muted">Preencha este campo apenas se existir um estoque mínimo.</small>
 								</div>
 								</div>

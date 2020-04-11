@@ -51,7 +51,7 @@ btn-custom{
 						echo $professor;
 					?></h3><br>
 	<div class="row">
-<a href="gerente_materiais.php" class="btn btn-primary btn-custom" >
+<a href="Admin_materiais.php" class="btn btn-primary btn-custom" >
 <span class="fas fa-clipboard-list img-circle text-primary btn-icon"></span>
 Lista de materiais
 </a>

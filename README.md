@@ -20,11 +20,16 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [CSS 3](http://www.css3.info/)
 - [JAVASCRIPT](https://www.javascript.com/)
 - [BOOTSTRAP](https://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released/)
+- [JQUERY](https://jquery.com/)
+- [AJAX](https://pt.wikipedia.org/wiki/Ajax_(programa%C3%A7%C3%A3o))
 
 ## 💻 Projeto
+
 - O sistema cella foi criado para ajudar no crontrole de estoque, e sistemas de almoxarifado
 
 ## 🔖 Layout
+
+- Em breve
 
 ## :memo: Licença
 

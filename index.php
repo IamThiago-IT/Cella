@@ -75,7 +75,7 @@
 			<!--img src="img/Cella.png" id="img_circular" LOGO-->
 			<form action='conferir_sessao.php' method='POST' autocomplete='off' id="formulario" class="login-form text-center">
 				<h3 class="mb-5 font-weight-light text-uppercase"><br>CELLA</h3><hr>
-				<h5>sistema de almoxarifad</h5><hr>
+				<h5>sistema de almoxarifado</h5><hr>
 				<div class="form-group">
 					<input type="text" class="form-control rounded-pill form-control-lg" onkeyup="limite(this.value)" onkeypress='return SomenteNumero(event)' placeholder="Número de matrícula" name='numero' id="numero" style="border: none;" required autofocus>
 				</div>

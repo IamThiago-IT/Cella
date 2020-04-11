@@ -1,4 +1,7 @@
 # Cella
+<h1 align="center">
+    <img alt="CELLA" title="#CELLA" src="" width="200px" />
+</h1>
 <h4 align="center">
    Sistema de almoxarifado
 </h4>

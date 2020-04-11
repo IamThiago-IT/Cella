@@ -96,7 +96,7 @@
 								<!------Fim do Submenu------>				
 							<li class="arq"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white"><span class="glyphicon glyphicon-cog" title="Nova Função"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="../Meu_perfil/perfil.php"style="background-color:white;">Perfil</a></li>
+									<li><a href="Meu_perfil/perfil.php"style="background-color:white;">Perfil</a></li>
 									<li><a href="../logout.php" style="background-color:white;">Sair</a></li>
 								</ul>
 						

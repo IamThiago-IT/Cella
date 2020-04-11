@@ -16,10 +16,10 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [HTML 5](https://nodejs.org/en/)
-- [CSS 3](https://reactjs.org)
-- [JAVASCRIPT](https://facebook.github.io/react-native/)
-- [BOOTSTRAP](https://expo.io/)
+- [HTML 5](https://html.com/)
+- [CSS 3](http://www.css3.info/)
+- [JAVASCRIPT](https://www.javascript.com/)
+- [BOOTSTRAP](https://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released/)
 
 ## 💻 Projeto
 - O sistema cella foi criado para ajudar no crontrole de estoque, e sistemas de almoxarifado

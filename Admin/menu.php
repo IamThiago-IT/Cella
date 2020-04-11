@@ -87,9 +87,9 @@
 								<ul class="dropdown-menu">
 								
 								
-									<li><a href="gerente_chaves.php" style="background-color:white;">Chaves</a></li>
-									<li><a href="gerente_notebooks.php"style="background-color:white;">Notebooks</a></li>
-									<li><a href="gerente_materiais.php" style="background-color:white;">Materiais</a></li>
+									<li><a href="Admin_chaves.php" style="background-color:white;">Chaves</a></li>
+									<li><a href="Admin_notebooks.php"style="background-color:white;">Notebooks</a></li>
+									<li><a href="Admin_materiais.php" style="background-color:white;">Materiais</a></li>
 								</ul>
 							</li>								
 															

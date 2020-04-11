@@ -41,7 +41,6 @@
 			setcookie("CookieAlmox","Teste de Cookie", time()+2040);
 
 			header("Location:Admin/home.php");
-			
 		}
 	}
 	else{

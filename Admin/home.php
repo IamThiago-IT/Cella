@@ -67,7 +67,7 @@ Colaboradores
 <span class="fas fa-user-friends img-circle text-primary btn-icon"></span>
 Professores
 </a>
-<a href="../Meu_perfil/perfil.php" class="btn btn-primary btn-custom">
+<a href="Meu_perfil/perfil.php" class="btn btn-primary btn-custom">
 <span class="fas fa-user img-circle text-primary btn-icon"></span>
 Perfil<font color=red>{Em testes}</font>
 </a>

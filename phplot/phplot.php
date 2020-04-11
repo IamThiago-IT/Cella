@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPlot - A class for creating scientific and business graphs, charts, plots
  *

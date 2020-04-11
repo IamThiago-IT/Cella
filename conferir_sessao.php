@@ -40,7 +40,7 @@
 			$_SESSION["abrir"] = "YES";
 			setcookie("CookieAlmox","Teste de Cookie", time()+2040);
 
-			header("Location:Gerente/home.php");
+			header("Location:Admin/home.php");
 			
 		}
 	}

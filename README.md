@@ -10,8 +10,10 @@
   <a href="#memo-licença">Licença</a>
 </p>
 
-
+## 💻 Projeto
 - O sistema cella foi criado para ajudar no crontrole de estoque, e sistemas de almoxarifado
+
+## 🔖 Layout
 
 ## :memo: Licença
 

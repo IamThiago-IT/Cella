@@ -27,5 +27,6 @@
             comboGoogleTradutor.value = sigla;
             changeEvent(comboGoogleTradutor);//Dispara a troca
         }
+        
     }
 	

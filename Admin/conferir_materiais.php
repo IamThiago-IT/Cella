@@ -26,11 +26,11 @@
 			$fusca = NULL; //encerra conexao com o banco
 			if($add == "NAO"){
 				$_SESSION['item_salv'] = "Item salvo com sucesso!";
-				echo "<script>window.location.href = 'gerente_materiais.php';</script>";
+				echo "<script>window.location.href = 'Admin_materiais.php';</script>";
 			}
 			else{
 				$_SESSION['item_salv'] = "Item salvo com sucesso!";
-				echo "<script>window.location.href = 'gerente_inserir.php';</script>";
+				echo "<script>window.location.href = 'Admin_inserir.php';</script>";
 			}
 		}
 
@@ -61,11 +61,11 @@
 			$fusca = NULL; //encerra conexao com o banco
 			if($add == "NAO"){
 				$_SESSION['item_salv'] = "Item salvo com sucesso!";
-				header("Location: gerente_materiais.php");
+				header("Location: Admin_materiais.php");
 			}
 			else{
 				$_SESSION['item_salv'] = "Item salvo com sucesso!";
-				echo "<script>window.location.href = 'gerente_inserir.php';</script>";
+				echo "<script>window.location.href = 'Admin_inserir.php';</script>";
 			}
 			
 			

@@ -26,6 +26,7 @@
 		<meta name="author" content="Cella">
 		<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
 		<link href="../bootstrap/vendor/bootstrap/css/divs.css" rel="stylesheet">
+		<link rel="stylesheet" href="../style.css">
 		<title>Cella - Perfil</title>
 		<style>
 

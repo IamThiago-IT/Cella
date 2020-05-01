@@ -26,7 +26,7 @@
 			$_SESSION["entrar"] = "OK";
 			setcookie("CookieAlmoxProfessor","Teste de Cookie professor", time()+2040);
 
-			header("Location:clientes/home_professor.php");
+			header("Location:Colaboradores/home.php");
 			
 			
 			

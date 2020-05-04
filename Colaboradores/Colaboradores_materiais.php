@@ -5,7 +5,7 @@
 		echo "<script>alert('".$_SESSION['item_salv']."')</script>";
 		unset($_SESSION["item_salv"]);
 	}	
-	include "menu.php";
+	include "../Admin/menu.php";
 	include "../conexao.php";
 		$sql      = "SELECT * FROM tb_produtos WHERE tipo=1";
 		$materiais = $fusca -> prepare($sql);
@@ -30,19 +30,9 @@
 		<link rel="stylesheet" href="../style.css">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
 		<style>
-			.glyphicon-duplicate{
-				font-size:30px;
-				color:#000;
-			}
-			.btn-icon {
-	color: Red;
-	font-size: 20px;
-                      }
-		  .btn-iconi {
-	color: blue;
-	font-size: 20px;
-                      }
-			
+			.glyphicon-duplicate{font-size:30px;color:#000;}
+			.btn-icon {color: Red;font-size: 20px;}
+		  .btn-iconi {color: blue;font-size: 20px;}
 		</style>
 	</head>
 	<body>
@@ -50,10 +40,7 @@
 			<div class="col-lg-12" style="margin-top: 5%;">	<!--a href="../Documentacao_BD">Download - Documentação e BD</a-->
 				<div class="panel panel-default">
 					<div class="panel-heading" style="width: 100%;">
-					<h2>Lista de Materiais</h2>		<!--............Íncone não aumenta de tamanho...............-->
-						<a href='material_pdf.php' style="width: 25px; height: 25px; position: relative; left:90%; top: -20px" title="Gerar PDF"><span aria-hidden="true" class="glyphicon glyphicon-duplicate"></span></a>
-						<a href='gerente_inserir.php'><img src="imagens/plus.png" title='Adicionar mais materiais' style="width: 25px; height: 25px; position: relative; left:95%; top: -30px" /></a>
-					</div>
+					<h2>Lista de Materiais</h2>		<!--............Íncone não aumenta de tamanho...............--></div>
 					<!-- /.panel-heading -->
 					<!-- Tabela -->
 					<div class="panel-body">
@@ -125,7 +112,6 @@
 				</div>
 			</div>
 		</footer>
-		
 	</body>
 	<script>
     $("a#delete-row").click(function(){
@@ -156,6 +142,4 @@
 			});
 		});
 		</script>
-	
-	
 </html>

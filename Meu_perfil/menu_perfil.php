@@ -8,6 +8,8 @@
 	$professor = $_SESSION['nome_professor'];
 	$numero = $_SESSION['numero'];
 	$tipo = $_SESSION['tipo_usuario'];
+	$senha = $_SESSION['senha_professor'];
+	
 ?>
 <html lang="pt-br">
 	<head>
@@ -37,14 +39,6 @@
 		<!-- MetisMenu CSS -->
 		<link href="../bootstrap/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
-		<!-- DataTables CSS -->
-		<link href="../bootstrap/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
-
-		<!-- DataTables Responsive CSS -->
-		<link href="../bootstrap/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
-
-		<!-- Custom CSS -->
-		<link href="../bootstrap/dist/css/sb-admin-2.css" rel="stylesheet">
 		<!-- Custom Fonts -->
 		<link href="../bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	</head>
@@ -57,50 +51,32 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-				  <a class="navbar-brand" href="../Gerente/home.php"><img src="../img/logoBandeira.png" class="logo" alt="Logo" title="logo">logo</a> <!-- Logo -->
+				  <a class="navbar-brand" href="../Admin/home.php"><img src="../img/logoBandeira.png" class="logo" alt="Logo" title="logo">logo</a> <!-- Logo -->
 				</div>
 				<div  class="collapse navbar-collapse" id="example-navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<ul class="nav navbar-nav">
+							<li class="arq" id="perfil">
+								<a href="#">
+								<font color="white"><i class="glyphicon glyphicon-home"></i>
+								Perfil</font> </a>
+							</li>
 							<li class="arq">
-								<a href="emprestimos.php" ><font color="white">Empréstimos</font></a>
-							</li>						
+								<a href="meu_usuario.php">
+								<font color="white"><i class="glyphicon glyphicon-user"></i>
+								Configurações da conta</font></a>
+							</li>
 							<li class="arq">
-								<a href="lista_usuarios.php" ><font color="white">Colaboradores</font></a>
-							</li>		
-							<li class="arq">
-								<a href="colaboradores.php"><font color="white">Professores</font></a>
-							</li>			
-							<li class="arq">
-							
-	
-								
-								<!--------Submenu----------->
-								
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font color="white">Materiais</font></a>
-								<ul class="dropdown-menu">
-								
-								
-									<li><a href="gerente_chaves.php" style="background-color:white;">Chaves</a></li>
-									<li><a href="gerente_notebooks.php"style="background-color:white;">Notebooks</a></li>
-									<li><a href="gerente_materiais.php" style="background-color:white;">Materiais</a></li>
-								</ul>
-							</li>								
-															
-								<!------Fim do Submenu------>				
-							<li class="arq"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white"><span class="glyphicon glyphicon-cog" title="Nova Função"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="../Meu_perfil/perfil.php"style="background-color:white;">Perfil</a></li>
-									<li><a href="../logout.php" style="background-color:white;">Sair</a></li>
-								</ul>
-						
+								<a href="help.php">
+									<font color="white"><i class="glyphicon glyphicon-flag"></i>
+									Help </font>
+								</a>
 							</li>
 						</ul>  
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<br>
 		<br>
 		<br>
 		<br>
@@ -119,7 +95,6 @@
 		<script src="../bootstrap/vendor/metisMenu/metisMenu.min.js"></script>
 
 		<!-- Custom Theme JavaScript -->
-		<script src="../bootstrap/dist/js/sb-admin-2.js"></script>
 
 		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
 	</body>

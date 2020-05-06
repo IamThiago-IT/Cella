@@ -14,6 +14,9 @@
 		$nome = $comp['nome_professor'];
 		$numero = $comp['numero'];
 		$tipo = $comp['tipo_usuario'];
+		$senha = $comp['senha_professor'];
+		$email = $comp['email'];
+		$img = $comp['img'];
 	}
 	$fusca = NULL;
 	if($existe==1){
@@ -23,6 +26,9 @@
 			$_SESSION['nome_professor'] = $nome;
 			$_SESSION['tipo_usuario'] = $tipo;
 			$_SESSION['numero'] = $numero;
+			$_SESSION['senha_professor'] = $senha;
+			$_SESSION['email'] = $email;
+			$_SESSION['img'] = $img;
 			$_SESSION["entrar"] = "OK";
 			setcookie("CookieAlmoxProfessor","Teste de Cookie professor", time()+2040);
 
@@ -37,6 +43,9 @@
 			$_SESSION['nome_professor'] = $nome;
 			$_SESSION['tipo_usuario'] = $tipo;
 			$_SESSION['numero'] = $numero;
+			$_SESSION['senha_professor'] = $senha;
+			$_SESSION['email'] = $email;
+			$_SESSION['img'] = $img;
 			$_SESSION["abrir"] = "YES";
 			setcookie("CookieAlmox","Teste de Cookie", time()+2040);
 

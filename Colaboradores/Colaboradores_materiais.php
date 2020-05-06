@@ -1,145 +1,73 @@
-<!DOCTYPE html>
 <?php
-	session_start();
-	if(isset($_SESSION['item_salv'])){
-		echo "<script>alert('".$_SESSION['item_salv']."')</script>";
-		unset($_SESSION["item_salv"]);
-	}	
-	include "../Admin/menu.php";
-	include "../conexao.php";
-		$sql      = "SELECT * FROM tb_produtos WHERE tipo=1";
-		$materiais = $fusca -> prepare($sql);
-		$materiais -> execute();
-		$qtde_materiais = $materiais -> rowCount();
-		$fusca = NULL;
+		session_start();
+		$nome    = $_SESSION['nome'];
+		$add     = $_SESSION['save_add'];
+		$medidas = $_SESSION['medidas'];
+		$obs     = $_SESSION['obs'];
+		include "../conexao.php";
+		$confere = "SELECT nome FROM tb_produtos WHERE nome = '$nome' AND medidas = '$medidas' AND obs = '$obs'";
+		$prod = $fusca -> prepare($confere);
+		$prod -> execute();
+		$existe = $prod -> rowCount();
+		if($existe == 0){
+			
+			session_start();
+			$id      = $_SESSION['id'];
+			$nome    = $_SESSION['nome'];
+			$medidas = $_SESSION['medidas'];
+			$qntde   = $_SESSION['quantidade'];
+			$minimo  = $_SESSION['minimo'];
+			$rtvl    = $_SESSION['rtvl'];
+			$obs     = $_SESSION['obs'];
+			$tipo    = $_SESSION['tipo'];
+			$sql      = "INSERT INTO tb_produtos (id_produto, nome, medidas, qntde, estoque_min, retornavel, obs, tipo) VALUES(?,?,?,?,?,?,?,?)";		
+			$materiais = $fusca -> prepare($sql);
+			$materiais -> execute(array($id,$nome,$medidas,$qntde,$minimo,$rtvl,$obs,$tipo));
+			$fusca = NULL; //encerra conexao com o banco
+			if($add == "NAO"){
+				$_SESSION['item_salv'] = "Item salvo com sucesso!";
+				echo "<script>window.location.href = 'Colaboradores_materiais.php';</script>";
+			}
+			else{
+				$_SESSION['item_salv'] = "Item salvo com sucesso!";
+				echo "<script>window.location.href = 'Colaboradores_inserir.php';</script>";
+			}
+		}
+
+		if($existe == 1){	
+			session_start();
+			$id     = $_SESSION['id'];
+			$medidas = $_SESSION['medidas'];
+			$qntde  = $_SESSION['quantidade'];
+			$obs     = $_SESSION['obs'];
+			$nome   = $_SESSION['nome'];
+			$sql = "SELECT qntde FROM tb_produtos WHERE nome = '$nome' AND medidas = '$medidas' AND obs = '$obs'";
+			$alt = $fusca -> prepare($sql);
+			$alt -> execute();
+			foreach($alt as $b){
+				$quantidade = $b["qntde"];
+			}
+			$qntde = $qntde +  $quantidade;
+			$sql1 = "update tb_produtos SET   
+					qntde   = ?
+					WHERE
+					nome    =  ?
+					AND
+					medidas = ?
+					AND
+					obs = ?";
+			$editar = $fusca -> prepare($sql1);
+			$editar -> execute(array($qntde,$nome,$medidas,$obs));
+			$fusca = NULL; //encerra conexao com o banco
+			if($add == "NAO"){
+				$_SESSION['item_salv'] = "Item salvo com sucesso!";
+				header("Location: Colaboradores_materiais.php");
+			}
+			else{
+				$_SESSION['item_salv'] = "Item salvo com sucesso!";
+				echo "<script>window.location.href = 'Colaboradores_inserir.php';</script>";
+			}
+			
+			
+		}
 ?>
-<html lang="pt-br">
-	<head>
-	<title>Cella-Lista de Materiais</title>
-	<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="author" content="Cella">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="../style.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
-		<style>
-			.glyphicon-duplicate{font-size:30px;color:#000;}
-			.btn-icon {color: Red;font-size: 20px;}
-		  .btn-iconi {color: blue;font-size: 20px;}
-		</style>
-	</head>
-	<body>
-		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
-			<div class="col-lg-12" style="margin-top: 5%;">	<!--a href="../Documentacao_BD">Download - Documentação e BD</a-->
-				<div class="panel panel-default">
-					<div class="panel-heading" style="width: 100%;">
-					<h2>Lista de Materiais</h2>		<!--............Íncone não aumenta de tamanho...............--></div>
-					<!-- /.panel-heading -->
-					<!-- Tabela -->
-					<div class="panel-body">
-						<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-							<thead>
-								<tr>
-									<th>Nome do produto</th>
-									<th>Medidas</th>
-									<th>Quantidade<br>em estoque</th>
-									<th>Estoque mínimo</th>
-									<th>Obs</th>
-									<th>Editar</th>
-									<th>Excluir</th>
-								</tr>
-							</thead>
-							<tbody> 
-										<?php
-											foreach($materiais AS $estoque){
-												$id_produto = $estoque['id_produto'];
-												$medidas    = $estoque['medidas'];
-												$nome       = $estoque['nome'];
-												$qntde      = $estoque['qntde'];
-												$minimo     = $estoque['estoque_min'];
-												$obs        = $estoque['obs'];
-												$tipo        = $estoque['tipo'];
-												$editar     = "<a href='produtos_editar.php?id=$id_produto' 
-												title='Editar $nome?'>
-													<i class='fas fa-edit btn-iconi'></i>
-												</a>";
-												$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_produto' data-target='$nome' title='Excluir $nome ?'><i class='fas fa-trash-alt btn-icon'></i></a>";
-												echo "<tr><td>$nome</td><td>$medidas</td><td>$qntde</td><td class='center'>$minimo</td><td>$obs</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
-												
-											}
-									?>
-							</tbody>
-						</table>
-					</div>
-					<!-- /.panel-body -->
-				</div>
-				<!-- /.panel -->
-			</div>
-			<!-- /.col-lg-12 -->
-		</div>
-				  <!-- /#page-wrapper -->
-		 <!-- /#wrapper -->
-
-		<!-- jQuery -->
-		<!--<script src="../bootstrap/vendor/jquery/jquery.min.js"></script> -->
-
-		<!-- Bootstrap Core JavaScript -->
-	   <!-- <script src="../bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>-->
-
-		<!-- Metis Menu Plugin JavaScript -->
-		<script src="../bootstrap/vendor/metisMenu/metisMenu.min.js"></script>
-
-		<!-- DataTables JavaScript -->
-		<script src="../bootstrap/vendor/datatables/js/jquery.dataTables.min.js"></script>
-		<script src="../bootstrap/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-		<script src="../bootstrap/vendor/datatables-responsive/dataTables.responsive.js"></script>
-
-		<!-- Custom Theme JavaScript -->
-		<script src="../bootstrap/dist/js/sb-admin-2.js"></script>
-
-		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-		<footer class="sticky-footer bg-white"> 
-			<div class="container my-auto"> 
-				<div class="copyright text-center my-auto">
-					<span>Copyright © Your Website 2019</span>
-				</div>
-			</div>
-		</footer>
-	</body>
-	<script>
-    $("a#delete-row").click(function(){
-        var id = $(this).attr("data-id");
-		var nome = $(this).attr("data-target");
-
-
-        if(confirm('Apagar este registro ?'+ nome))
-        {
-            $.ajax({
-               url: 'apagar_chaves.php',
-               type: 'POST',
-               data: {id_teste: id},
-               error: function() {
-                  alert('Something is wrong');
-               },
-               success: function(data) {
-                    $("#"+id).remove(); 
-					 location.reload();
-               }
-            });
-        }
-    });
-
-		$(document).ready(function() {
-			$('#dataTables-example').DataTable({
-				responsive: true
-			});
-		});
-		</script>
-</html>

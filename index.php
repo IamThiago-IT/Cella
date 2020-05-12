@@ -41,6 +41,7 @@
 			.goog-te-banner-frame {display: none !important;}
 			body {position: static !important;top: 0 !important;}
 			.new{position:absolute; top:5px; left:90%; width: 30px;height: 30px;cursor: pointer;}
+			.new2{position:absolute; top:5px; left:90%; width: 30px;height: 30px;cursor: pointer;}
 		</style>
 		<script>
 		function limite(dado){
@@ -68,14 +69,15 @@
 	
 		<div class="d-flex justify-content-center align-items-center login-container">
 		<div id="google_translate_element" class="boxTradutor"></div>
-	 <a href="javascript:trocarIdioma('pt')"><img src="img/br.png" class="band" alt="portugues-br"></a><br>
-     <a href="javascript:trocarIdioma('en')"><img src="img/en.png" class="band1" alt="ingles" ></a>
+	 
 			<!---->
-			<i class="fas fa-info-circle new" data-toggle="modal" data-target="#exampleModal"></i>
+			
+			
+			
 			<!--img src="img/Cella.png" id="img_circular" LOGO-->
 			<form action='conferir_sessao.php' method='POST' autocomplete='off' id="formulario" class="login-form text-center">
 				<h3 class="mb-5 font-weight-light text-uppercase"><br>CELLA</h3><hr>
-				<h5>sistema de almoxarifado</h5><hr>
+				<h6>SISTEMA DE ALMOXARIFADO</h6><hr>
 				<div class="form-group">
 					<input type="text" class="form-control rounded-pill form-control-lg" onkeyup="limite(this.value)" onkeypress='return SomenteNumero(event)' placeholder="Número de matrícula" name='numero' id="numero" style="border: none;" required autofocus>
 				</div>
@@ -125,6 +127,18 @@
 
 		</script>
 		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			<!--  Droptown	-->
+	<i class="fas fa-info new" data-toggle="modal" data-target="#exampleModal"></i>
+			<div class="dropdown">
+				  <a class="btn btn-secondary dropdown-toggle new2" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-cog "></i>
+				  </a>
+					 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a href="javascript:trocarIdioma('pt')"><img src="img/br.png" class="band" alt="portugues-br">Portugues</a><br>
+					<a href="javascript:trocarIdioma('en')"><img src="img/en.png" class="band" alt="ingles" >Ingles</a>
+					</div>
+				</div>	
+	<!--  -->	
 		<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -135,14 +149,17 @@
         </button>
       </div>
       <div class="modal-body">
-        O sistema cella foi criado para ajudar no crontrole de estoque, e sistemas de almoxarifado
+        O sistema cella foi criado para ajudar no crontrole de estoque, e sistemas de almoxarifado<br>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tenha uma ótima experiência</button>
+		<hr>
       </div>
     </div>
   </div>
 </div>
+		  
 		<footer class="sticky-footer bg-white"> 
 			<div class="container my-auto"> 
 				<div class="copyright text-center my-auto">
@@ -150,7 +167,5 @@
 				</div>
 			</div>
 		</footer>
-		
-
 </body>
 </html>

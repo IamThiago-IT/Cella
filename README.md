@@ -32,6 +32,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Em breve
 
+## 📚 Diagrama
+- https://dbdiagram.io/d
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.

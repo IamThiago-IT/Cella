@@ -15,27 +15,8 @@ footer {display: block;}
 .band{width: 30px;height: 30px}
 .band1{right:50%; width: 30px;height: 30px}
 .quadro1{width: 25%;height: 59%;border:1px solid #035e9f;position: absolute;top: 28%;left: 38%;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;}
-.h2{
-	width: 25%;
-	height: 59%;
-	position: absolute;
-    top: 30%;
-    left: 40%;
-	 font: normal 60% helvetica, tahoma, arial;
-}
-.btnn {
-  width: 100%;
-  background: none;
-  border: 1px solid #035e9f;
-  color: black;
-  padding: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 12px 0;
-	-webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
+.h2{width: 25%;height: 59%;position: absolute;top: 30%;left: 40%;font: normal 60% helvetica, tahoma, arial;}
+.btnn {width: 100%;background: none;border: 1px solid #035e9f;color: black;padding: 5px;font-size: 18px;cursor: pointer;margin: 12px 0;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
 .textbox{
   width: 100%;
   overflow: hidden;

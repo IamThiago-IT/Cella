@@ -13,17 +13,7 @@ footer {display: block;}
 .quadro{width: 30%;height: 59%;border:2px solid #035e9f;position: absolute;top: 20%;left: 39%;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;}
 .band{width: 30px;height: 30px}
 .band1{right:50%; width: 30px;height: 30px}
-.quadro1{
-	width: 25%;
-	height: 59%;
-	border:1px solid #035e9f;
-	position: absolute;
-    top: 28%;
-    left: 38%;
-	-webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-     border-radius: 20px;
-}
+.quadro1{width: 25%;height: 59%;border:1px solid #035e9f;position: absolute;top: 28%;left: 38%;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;}
 .h2{
 	width: 25%;
 	height: 59%;

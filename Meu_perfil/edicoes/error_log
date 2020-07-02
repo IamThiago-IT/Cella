@@ -1,0 +1,26 @@
+[20-Apr-2020 16:22:31 America/Fortaleza] PHP Parse error:  syntax error, unexpected '=', expecting end of file in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 14
+[20-Apr-2020 16:24:53 America/Fortaleza] PHP Parse error:  syntax error, unexpected '=', expecting end of file in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 14
+[20-Apr-2020 16:34:05 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 12
+[20-Apr-2020 16:34:12 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 12
+[20-Apr-2020 16:38:18 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 12
+[20-Apr-2020 16:41:47 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 12
+[20-Apr-2020 16:46:46 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 13
+[20-Apr-2020 16:46:57 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/edicoes/nome.php on line 13

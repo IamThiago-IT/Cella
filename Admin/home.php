@@ -2,7 +2,6 @@
 <?php	
 	include "../conexao.php";
 	include "menu_home.php";
-	include "index.php";
 		
 	session_start();
 	if($_SESSION["abrir"]!="YES"){
@@ -26,79 +25,186 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="sortcut icon" href="../img/shortcut_cella.png" type="image/png" />
+		<link rel="stylesheet" href="../Colaboradores/style.css" />
+		<link rel="stylesheet" href="../style.css" />
 		<meta name="description" content="">
 		<meta name="author" content="">
-	<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
-	<link href="../bootstrap/vendor/bootstrap/css/divs.css" rel="stylesheet">
 	<title>Cella-Home</title>
 </head>
-<style>
-btn-custom{
-	width:5px;
-}
-.btn-icon {
-	padding: 8px;
-	background: #ffffff;
-}
-</style>
 <body>
-	<div class="container" style="width: 45%;">
-	<br><br><h3 align="center">Seja bem-vindo  <?php
+  <div class="pt-table desktop-768">
+    <div class="pt-tablecell page-home relative">
+                    <div class="container">
+                        <div class="row">
+						<br><br><br>
+					<h3 align="center">Seja bem-vindo,  <?php
 						echo $professor;
 					?></h3><br>
-	<div class="row">
-<a href="Admin_materiais.php" class="btn btn-primary btn-custom" >
-<span class="fas fa-clipboard-list img-circle text-primary btn-icon"></span>
-Lista de materiais
-</a>
-<a href="emprestimos.php" class="btn btn-primary btn-custom">
-<span class="fas fa-list img-circle text-primary btn-icon"></span>
-Emprestimos
-</a>
-<a href="lista_usuarios.php" class="btn btn-primary btn-custom">
-<span class="fas fa-users img-circle text-primary btn-icon"></span>
-Colaboradores
-</a>
-<a href="colaboradores.php" class="btn btn-primary btn-custom">
-<span class="fas fa-user-friends img-circle text-primary btn-icon"></span>
-Professores
-</a>
-<a href="Meu_perfil/perfil.php" class="btn btn-primary btn-custom">
-<span class="fas fa-user img-circle text-primary btn-icon"></span>
-Perfil<font color=red>{Em testes}</font>
-</a>
-<a href="graficos_tudo.php" class="btn btn-primary btn-custom">
-<span class="fas fa-chart-pie img-circle text-primary btn-icon"></span>
-Gráficos
-</a>
-<a href="../CODEQR/qrcode.html" class="btn btn-primary btn-custom">
-<span class="fas fa-qrcode img-circle text-primary btn-icon"></span>
-QR Code{Em testes}</a>
-<a href="../Documentacao_BD/index.php" class="btn btn-primary btn-custom">
-<span class="fas fa-search img-circle text-primary btn-icon"></span>
-Documentação
-</a>
-<a href="../logout.php" class="btn btn-primary btn-custom">
-<span class="fas fa-sign-out-alt img-circle text-primary btn-icon"></span>
-sair
-</a>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
+                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
 
-<!--Rodapé-->
-		<footer class="footerone"> 
-					<span>&copy; Copyright 2019 - 2020</span>
-		</footer>
-<!--Rodapé-->
+                                <div class="hexagon-menu clear">
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="admin_materiais.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-list"></i>
+                                                </span>
+                                                <span class="title">Lista de Materiais</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="admin_chaves.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-key"></i>
+                                                </span>
+                                                <span class="title">chaves</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="admin_notebooks.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-laptop"></i>
+                                                </span>
+                                                <span class="title">Lista de Notebooks</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>    
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="../Meu_perfil/perfil.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                                <span class="title">Perfil</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="emprestimos.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-life-ring"></i>
+                                                </span>
+                                                <span class="title">Emprestimos</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="graficos_tudo.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </span>
+                                                <span class="title">Gráficos</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="home_P2.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                     <i class="fas fa-chevron-circle-right"></i>
+                                                </span>
+                                                <span class="title">Mais opções</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</body>
+					<!--Rodapé-->
+							<footer class="footerone"> 
+										<span>&copy; Copyright 2019 - 2020</span>
+							</footer>
+					<!--Rodapé-->
+			 </div>
+			</div>		
+	</body>
 </html>

@@ -1,0 +1,58 @@
+[13-Apr-2020 16:44:15 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:15 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:15 America/Fortaleza] PHP Warning:  include(): Failed opening '../conexao' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:15 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 5
+[13-Apr-2020 16:44:19 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:19 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:19 America/Fortaleza] PHP Warning:  include(): Failed opening '../conexao' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:19 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 5
+[13-Apr-2020 16:44:31 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:31 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:31 America/Fortaleza] PHP Warning:  include(): Failed opening '../conexao' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:31 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 5
+[13-Apr-2020 16:44:32 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:32 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:32 America/Fortaleza] PHP Warning:  include(): Failed opening '../conexao' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:44:32 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 5
+[13-Apr-2020 16:44:55 America/Fortaleza] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/modain69/public_html/cella/Pesquisa/index.php on line 7
+[13-Apr-2020 16:44:55 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home2/modain69/public_html/cella/Pesquisa/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/index.php on line 7
+[13-Apr-2020 16:45:34 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:45:34 America/Fortaleza] PHP Warning:  include(../conexao): failed to open stream: No such file or directory in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:45:34 America/Fortaleza] PHP Warning:  include(): Failed opening '../conexao' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 3
+[13-Apr-2020 16:45:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/pesquisa.php on line 5
+[13-Apr-2020 16:52:03 America/Fortaleza] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/modain69/public_html/cella/Pesquisa/index.php on line 7
+[13-Apr-2020 16:52:03 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home2/modain69/public_html/cella/Pesquisa/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Pesquisa/index.php on line 7
+[13-Apr-2020 17:14:55 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:14:59 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:15:33 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:15:35 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:15:37 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:15:37 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:15:40 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:17:35 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:17:39 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:17:40 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:22:45 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:22:47 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9
+[13-Apr-2020 17:22:56 America/Fortaleza] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/modain69/public_html/cella/Pesquisa/resultados.php on line 9

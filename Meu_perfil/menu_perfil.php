@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start();
-	if($_SESSION["abrir"]!="YES"){
+	if($_SESSION["abrir"]!="YES" && $_SESSION["entrar"]!="OK"){
 		header('location:../index.php');
 	}
 	$id_professor = $_SESSION['id_professor'];
@@ -9,6 +9,8 @@
 	$numero = $_SESSION['numero'];
 	$tipo = $_SESSION['tipo_usuario'];
 	$senha = $_SESSION['senha_professor'];
+	$email = $_SESSION['email'];
+	$img   = $_SESSION['img'];
 	
 ?>
 <html lang="pt-br">
@@ -18,11 +20,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="sortcut icon" href="../img/shortcut_cella.png" type="image/png" />
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="stylesheet" href="../style.css">
+		<script src="../alertifyjs/alertify.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../alertifyjs/css/alertify.min.css">
+		<link rel="stylesheet" type="text/css" href="../alertifyjs/css/themes/default.min.css">
+		<link rel="stylesheet" type="text/css" href="../alertifyjs/css/themes/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="../alertifyjs/css/themes/bootstrap.min.css">
+
 		<style>
+		
 			.arq{font-size:140%;}
 			.logo{position: absolute;top: -5px;width: 150px; height: 85px;}
 			.btn-one {color: #000;.bckground-color: #fff;border-color: #000;text-decoration:none;}
@@ -31,7 +40,6 @@
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<!--<script src="../bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>-->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- Bootstrap Core CSS -->
 		<link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,10 +66,10 @@
 						<ul class="nav navbar-nav">
 							<li class="arq" id="perfil">
 								<a href="#">
-								<font color="white"><i class="glyphicon glyphicon-home"></i>
-								Perfil</font> </a>
+								<font color="white" data-toggle="modal" data-target="#exampleModals"><i class="glyphicon glyphicon-home"></i>
+								Sair</font> </a>
 							</li>
-							<li class="arq">
+							<!--<li class="arq">
 								<a href="meu_usuario.php">
 								<font color="white"><i class="glyphicon glyphicon-user"></i>
 								Configurações da conta</font></a>
@@ -71,7 +79,7 @@
 									<font color="white"><i class="glyphicon glyphicon-flag"></i>
 									Help </font>
 								</a>
-							</li>
+							</li>-->
 						</ul>  
 					</ul>
 				</div>
@@ -81,6 +89,30 @@
 		<br>
 		<br>
 		<br>
+		<!-- Modal -->
+<div class="modal fade" id="exampleModals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Sair?</h5>
+      </div>
+      <div class="modal-body">
+        Tem certeza que deseja sair?
+      </div> 
+      <div class="modal-footer">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="../logout.php" type="button"  class="btn btn-default">Sim</a>
+	  </div>
+	  <div class="col-xs-12 col-sm-6">
+        <a type="button" class="btn btn-default" data-dismiss="modal">Não</a>
+      </div>
+	  </div>
+    </div>
+  </div>
+</div>
 		 <!-- /#page-wrapper -->
 
 		<!-- /#wrapper -->
@@ -97,5 +129,38 @@
 		<!-- Custom Theme JavaScript -->
 
 		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+										<script>	
+    var comboGoogleTradutor = null; //Varialvel global
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+            includedLanguages: 'en,pt',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
+
+        comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+    }
+
+    function changeEvent(el) {
+        if (el.fireEvent) {
+            el.fireEvent('onchange');
+        } else {
+            var evObj = document.createEvent("HTMLEvents");
+
+            evObj.initEvent("change", false, true);
+            el.dispatchEvent(evObj);
+        }
+    }
+
+    function trocarIdioma(sigla) {
+        if (comboGoogleTradutor) {
+            comboGoogleTradutor.value = sigla;
+            changeEvent(comboGoogleTradutor);//Dispara a troca
+        }
+    }
+
+		</script>
+		  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</body>
 </html>

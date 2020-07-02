@@ -5,7 +5,7 @@
 	Arquivo para conexão com o banco de dados
 	*/
 	try{ //tente
-		$fusca = new PDO("mysql:host=localhost;dbname=u277754222_cella","u277754222_cella123","cella123");
+		$fusca = new PDO("mysql:host=localhost;dbname=u513475005_cella","u513475005_cella123","maria34");
 		//echo "Conexão efetuada com sucesso";
 	} 
 	catch(PDOException $e){ //Bloco correspondente ao try	
@@ -13,4 +13,5 @@
 		// verificar método echo $e->getCode(); 
 		echo $e->getMessage(); //método amplamente utilizado		
 	}
+
 ?>	

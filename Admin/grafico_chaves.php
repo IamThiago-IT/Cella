@@ -61,4 +61,34 @@
 			});
 			chart.draw(dados, json.config);
 		  });
+		  //chaves emprestadas
+		  google.load('visualization', '1.0', {'packages':['corechart']});
+		  google.setOnLoadCallback(function(){
+			var json_text = $.ajax({url: "grafico/chaves_mais_emp.php", dataType:"json", async: false}).responseText;
+			var json = eval("(" + json_text + ")");
+			var dados = new google.visualization.DataTable(json.dados);
+			var chart_div = document.getElementById('area_mais_chaves');
+			var chaves_input = document.getElementById('chaves_input');
+			var chart = new google.visualization.BarChart(document.getElementById('area_mais_chaves'));
+			google.visualization.events.addListener(chart, 'ready', function () {
+				chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+				chaves_input.value = chart.getImageURI();
+			});
+			chart.draw(dados, json.config);
+		  });
+		  //materiais emprestados
+		  google.load('visualization', '1.0', {'packages':['corechart']});
+		  google.setOnLoadCallback(function(){
+			var json_text = $.ajax({url: "grafico/mais_emprestados.php", dataType:"json", async: false}).responseText;
+			var json = eval("(" + json_text + ")");
+			var dados = new google.visualization.DataTable(json.dados);
+			var chart_div = document.getElementById('area_mais_emp');
+			var mais_emp = document.getElementById('mais_emp');
+			var chart = new google.visualization.BarChart(document.getElementById('area_mais_emp'));
+			google.visualization.events.addListener(chart, 'ready', function () {
+				chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+				mais_emp.value = chart.getImageURI();
+			});
+			chart.draw(dados, json.config);
+		  });
 		</script>

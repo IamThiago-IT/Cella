@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <?php
-	session_start();
-	if(isset($_SESSION['item_salv'])){
-		echo "<script>alert('".$_SESSION['item_salv']."')</script>";
-		unset($_SESSION["item_salv"]);
-	}	
+	session_start();	
 	include "menu.php";
 	include "../conexao.php";
 	$sql    = "SELECT tb_professores.*, tipo_user.nome_usuario
@@ -13,31 +9,60 @@
     ON tb_professores.tipo_usuario = tipo_user.tipo_usuario WHERE tb_professores.tipo_usuario = 1 OR tb_professores.tipo_usuario = 2";
 	$users = $fusca -> prepare($sql);
 	$users  -> execute();
+	
 	$fusca = NULL;
 ?>
 <html lang="pt-br">
+	<html lang="pt-br">
 	<head>
-	<title>Cella-Usuários</title>
+		<title>Cella-Lista de Materiais</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
+		<link href="cadastros.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../style.css">
+		<script src="../Script/tooltip.js"></script>
+		<style>
+			.glyphicon-duplicate{font-size:30px;color:#000;}
+			.glyphicon-plus{
+				font-size:30px;
+				color:#000;
+			}
+			.add{
+				position: absolute;
+				right:20px;
+			}
+			.btn-icon {color: Red;font-size: 20px;}
+			.btn-iconi {color: blue;font-size: 20px;}
+			.glyphicon-paperclip {color: #32CD32;font-size: 19px;}
+			.tabela{
+				position: relative;
+				width: 90vw;
+				height: 70vh;
+				overflow-y: scroll;
+				padding:10px;
+			}
+			h2{
+				display:inline-block;
+			}
+			.pdf{
+				position: absolute;
+				right:65px;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
-			<div class="col-lg-12" style="margin-top: 5%;">	
+		<main class="principal">
+			<div>
+				<div class="tabela" id="suaDiv">
 				<div class="panel panel-default">
-					<div class="panel-heading">
+					<div class="panel-heading" style="width: 100%;">
 						<h2>Lista de Usuários</h2>
-						<a href='gerente_cadastro.php'><img src="imagens/plus.png" title='Cadastrar novo colaborador' style="width: 25px; height: 25px; position: relative; left:95%; top: -30px" /></a>
+						<a href='admin_cadastro.php' id="left" data-toggle="tooltip" data-placement="bottom" title='Adicionar mais usuários' class="add"><span aria-hidden="true" class="glyphicon glyphicon-plus"></span></a>
 					</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
@@ -62,9 +87,9 @@
 									$tipo    = $user['nome_usuario'];
 									$editar  = "<a href='editar_users.php?id=$id_user' 
 												title='Editar $nome ?'>
-												<img src='imagens/editar.png' width='25px'>
+												<i class='fas fa-edit btn-iconi'></i>
 												</a>";
-									$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_user' data-target='$nome' title='Excluir $nome ?'><img src='imagens/trash.png' width='25px'></a>";
+									$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_user' data-target='$nome' title='Excluir $nome ?'><i class='fas fa-trash-alt btn-icon'></i></a>";
 									echo "<tr><td>$nome</td><td>$numero</td><td>$email</td><td>$tipo</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
 								}
 								?>
@@ -77,6 +102,7 @@
 			</div>
 			<!-- /.col-lg-12 -->
 		</div>
+		</main>
 				  <!-- /#page-wrapper -->
 		 <!-- /#wrapper -->
 
@@ -97,8 +123,17 @@
 		<!-- Custom Theme JavaScript -->
 		<script src="../bootstrap/dist/js/sb-admin-2.js"></script>
 
-		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-		<script src="js/personalizado.js"></script>
+		<!-- Page-Level Demo Scripts - Tables - Use for reference -->	
+		<main class="rodape">
+			© Copyright 2019-2020
+		</main>
+		<?php
+			session_start();
+			if(isset($_SESSION['cadas_n'])){
+				echo "<script>".$_SESSION['cadas_n']."</script>";
+				unset($_SESSION["cadas_n"]);
+			}
+		?>
 		<script>
 		$(document).ready(function() {
 			$('#dataTables-example').DataTable({
@@ -106,36 +141,26 @@
 			});
 		});
 		</script>
-		
-		<footer class="sticky-footer bg-white"> 
-			<div class="container my-auto"> 
-				<div class="copyright text-center my-auto">
-					<span>Copyright © Your Website 2019</span>
-				</div>
-			</div>
-		</footer>
-	
+		<script>
+			$("a#delete-row").click(function(){
+				var id = $(this).attr("data-id");
+				var nome = $(this).attr("data-target");
+
+				alertify.confirm('Apagar o usuário: '+ nome+' ?').set('onok', function(closeEvent){
+					$.ajax({
+					   url: 'apagar_usuarios.php',
+					   type: 'POST',
+					   data: {id_teste: id},
+					   error: function() {
+						  alert('Something is wrong');
+					   },
+					   success: function(data) {
+							$("#"+id).remove();
+							 location.reload();
+					   }
+					});
+				} );
+			});
+		</script>
 	</body>
-	<script>
-    $("a#delete-row").click(function(){
-        var id = $(this).attr("data-id");
-
-
-        if(confirm('Apagar este registro ?'+ id))
-        {
-            $.ajax({
-               url: 'apagar_usuarios.php',
-               type: 'POST',
-               data: {id_teste: id},
-               error: function() {
-                  alert('Something is wrong');
-               },
-               success: function(data) {
-                    $("#"+id).remove();
-					 location.reload();
-               }
-            });
-        }
-    });
-	</script>
 </html>

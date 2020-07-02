@@ -2,12 +2,6 @@
 <?php	
 	include "../conexao.php";
 	include "menu_perfil.php";
-	$sql = "SELECT * FROM tipo_user WHERE tipo_usuario = $tipo "; 
-	$materiais = $fusca -> prepare($sql);
-	$materiais -> execute();
-	foreach($materiais as $material){
-		$user = $material['nome_usuario'];
-	}
 ?>
 <html lang="pt-br">
 	<head>
@@ -18,14 +12,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="sortcut icon" href="../img/shortcut_cella.png" type="image/png" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<title>Cella - Perfil</title>
 		<style>
 			body{
 				height: 100vh;
+				position: static !important; top: 0 !important;
 			}
 			.principal{
 				height: calc(100vh - 145px);
@@ -41,7 +35,7 @@
 				color: #fff;
 			}
 			.conteudo{
-				font-size: 2rem;
+				
 			}
 			.conteudo{
 				position: relative;
@@ -50,6 +44,12 @@
 				padding: 10px;
 				box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.75);
 			}
+						  #google_translate_element {display: none;}
+			.goog-te-banner-frame {display: none !important;}
+				<!-- Estilo na barra de rolagem-->
+			::-webkit-scrollbar-track {background-color: #F4F4F4;}
+			::-webkit-scrollbar {width: 6px;background: #F4F4F4;}
+			::-webkit-scrollbar-thumb {background: #dad7d7;}
 		</style>
 	</head>
 	<body>

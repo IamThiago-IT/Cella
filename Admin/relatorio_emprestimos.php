@@ -23,20 +23,63 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="sortcut icon" href="../img/shortcut_cella.png" type="image/png" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="../bootstrap/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 		<link href="../bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<style>
+			.logo{
+				width: 150px;
+				height: 85px;
+			}
+			header > h3 {font-size: calc(1em + 1vw);}
+			header{
+				grid-area: cabecalho;
+				background-color:#035e7f;
+				color:#fff;
+				display: flex;
+				justify-content: space-between;
+			}
+			main{
+				grid-area: tabela;
+			}
+			.g1{
+				grid-area: grafico1;
+			}
+			.g2{
+				grid-area: grafico2;
+			}
+			body{
+                display: grid;
+                grid-template-columns: 500px 1fr;
+                grid-template-rows: 100px 1fr 1fr;
+                grid-template-areas: 
+                    'cabecalho cabecalho'
+                    'grafico1 tabela'
+                    'grafico2 tabela';
+				grid-row-gap: 25px;
+				grid-column-gap: 25px;
+            }
+			@media(max-width:768px){
+				body{
+					grid-template-columns: 1fr;
+					grid-template-rows: 100px 1fr 500px 500px;
+					grid-template-areas: 
+						'cabecalho'
+						'tabela'
+						'grafico1'
+						'grafico2';
+					grid-row-gap: 25px;
+				}
+			}
+		</style>
 	</head>
 	<body>
-	
-		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 3%;">
-		<div class="col-lg-12">
-			<h1>Relatório De Chaves</h1>
-		</div>
-			<div class="col-lg-12" style=" margin-top: 1%;">
+		<header>
+			<h1>Relatório De Chaves</h1><img src="../img/logoBandeira.png" class="logo">
+		</header>
+		<main>
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h2>Lista de empréstimos</h2>
@@ -73,21 +116,19 @@
 					<!-- /.panel-body -->
 				</div>
 				<!-- /.panel -->
-			</div>
-			<!-- /.col-lg-12 -->
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
+		</main>
+		<form method="post" action="teste.php" target="_blank">
+			<div class='g1'>
 				<div id='area_grafico'></div>
-				<div id='area_note'></div>
-				<form method="post" action="teste.php">
-					<input type="hidden" name="chart_input" id="chart_input">
-					<input type="hidden" name="note_input" id="note_input">
+				<div id='area_mais_chaves'></div>
+				<input type="hidden" name="chart_input" id="chart_input">
+				<input type="hidden" name="chaves_input" id="chaves_input">
 			</div>
-			<div class="col-lg-12">
-				<button style="background-color:Red;" type="submit"><font color="White">Gerar PDF</font></button>
-				</form>
+			<div class='g2'>
+				
+					<button style="background-color:#035e7f;border: 1px solid transparent;border-radius: 4px; margin:5px;" type="submit"><font color="White">Gerar PDF</font></button>
+					
 			</div>
-		</div>
+		</form>
 	</body>
 </html>

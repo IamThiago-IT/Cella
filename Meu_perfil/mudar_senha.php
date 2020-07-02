@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <?php	
 	include "../conexao.php";
 	include "menu_perfil.php";

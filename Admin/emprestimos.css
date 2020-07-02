@@ -1,0 +1,93 @@
+.glyphicon-duplicate{font-size:30px;color:#000;}
+			body{
+				height: 100vh;
+				position: static !important;
+				top: 0 !important;
+			}
+			.conteiner{
+				margin-top:2.8vh;
+				height:50px;
+				background-color: #F3FBFE;
+				color: #fff;
+				display:flex;
+				flex-wrap: wrap;
+				flex-direction: row-reverse;
+				justify-content: start-reverse;
+				align-items: center;
+				padding-bottom: 10px;
+				margin-bottom: 8px;
+				z-index: 0;
+				box-shadow: 0px 0px 10px -2px rgba(3,94,127,196);
+			}
+			.button{
+				color: #fff;
+				margin-right: 1%;
+				margin-top: 5px;
+				padding:4px;
+				font-size: 20px;
+				border: 1px solid #1ABC9C ;
+				background-color: #1ABC9C ;
+			}
+			
+			.conteiner a{
+				color:#fff;
+			}
+			.principal{
+				height: calc(100vh - 218px);
+				padding: 10px;
+			}
+			.rodape{
+				height: 60px;
+				background-color: #035e7f;
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				color: #fff;
+			}
+			.conteudo{
+				font-size: 2rem;
+			}
+			.conteudo{
+				position: relative;
+				height: calc(100vh - 240px);
+				overflow-y: scroll;
+				background-color: #fff;
+				padding-top: 20px;
+				/*box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.75);*/
+			}
+			.direita{
+				 grid-area: direita;
+			}
+			.esquerda{
+				 grid-area: esquerda;
+			}
+			.resultado{
+				display: grid;
+				grid-template-rows: 1fr;
+				grid-template-columns: 50% 1fr;
+				grid-template-areas: "direita esquerda"
+			}
+			@media(max-width: 768px){
+                .resultado{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 50% 1fr;
+                    grid-template-areas:
+						'direita'
+						'esquerda';
+                }
+            }
+						::-webkit-scrollbar-track {
+				background-color: #F4F4F4;
+			}
+			::-webkit-scrollbar {
+				width: 6px;
+				background: #F4F4F4;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #dad7d7;
+			}
+			#google_translate_element {display: none;}
+			.goog-te-banner-frame {
+				display: none !important;
+			}

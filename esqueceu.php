@@ -1,100 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
 	<head>
+	
 		<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
 		<meta name="author" content="Cella">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="style.css">
-		<title>Cella-login</title>
+		<link rel="stylesheet" href="Style/rs.css">
+		<script type="text/javascript" src="tradutor.js"></script>
+		<title>Cella-Recuperar</title>
 		<!-- BOOTSTRAP -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<!-- ESTILOS PARA ESTA PÁGINA -->
 		<!-- Nesse caso, este estilo é apenas para inserir imagens -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
 		<!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link rel="sortcut icon" href="img/icone_cella.jpg" type="image/jpg" />
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js" rel="stylesheet">
-		<style>
-			.botao{
-				background-color: #662b84;
-				color: #fff;
-				border-radius: 25px;
-				border: none;
-				width: 275px;
-				height: 48px;
-				font-size: 15px;
-				font-weight: 600;
-				min-height: 48px;
-				transition: 0.5s;
-				}
-				.botao:hover{background-color: #522b84;}
-		</style>
-
 	</head>
 	<body>
-		<div class="d-flex justify-content-center align-items-center login-container">
-			<!--img src="img/Cella.png" id="img_circular" LOGO-->
-			<form action='esqueceu_2.php' method='POST' id="formulario" class="login-form text-center">
-				<h3 class="mb-5 font-weight-light text-uppercase"><br>CELLA</h3><hr>
+	<div id="google_translate_element" class="boxTradutor"></div>
+    <section class="form-section">
+      <h1>Cella</h1>
+      <div class="form-wrapper">
+			<form action='enviar_senha.php' method='POST' id="formulario" class="login-form text-center">
 				<h5>Esqueceu sua senha?</h5><hr>
-				<div class="form-group">
-					<input type="email" name="email" id="email" required class="form-control rounded-pill form-control-lg"  placeholder="Digite seu e-mail" style="border: none;">
+				<div class="input-block">
+					<label for="login-email">Coloque seu e-mail</label>
+					<input type="text" name="email" id="email" data-validation="email" placeholder="Digite seu e-mail" >
 				</div>
-					Digite seu e-mail, lhe enviaremos um código que você poderá usar para mudar a sua senha.
-				<b><input type='submit' name='salvar' value='Enviar' class="botao text-uppercase btn-block btn mt-5 rounded-pill btn-lg" style="color: #fff;"></b><br>
-			</form>
+					Digite seu e-mail, lhe enviaremos um link<p> em seu e-mail para mudar a sua senha.<p>
+					<button type="submit" name='salvar' value='Enviar' class="btn-login" style="color: #fff;">Enviar</button>
+				<p id="troca"><p/>
+        </form>
+      </div>
+    </section>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+												<script>	
+    var comboGoogleTradutor = null; //Varialvel global
 
-		</div>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+            includedLanguages: 'en,pt',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+        comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+    }
 
-			<div class="footer">
-			<img src="img/Senai_-_AZUL.jpg" class="imglogo" alt="Logo_senai" title="Logo_senai">
-			&copy; Copyright 2019 - 2020
-			</div>
-		
-		<script src="bootstrap/vendor/jquery/jquery.min.js"></script>
-		<script src="Gerente/js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
-		<script>
-            $("#formulario").validate({
-			   rules : {
-					email:{
-						required:true
-					}                                
-			   },
-			   messages:{
-					email:{
-						required:"<font style='color:red;'>É necessário informar um email</font>"
-					}    
-			   }
-		});  
-		/*jQuery(document).ready(function(){
-			jQuery('#formulario').submit(function(){
-				var dado = $(.email).val();
-				$.ajax({
-					type: "POST",
-					url: "esqueceu_2.php",
-					data: {datas: dado},
-					success: function( data )
-					{
-						alert( data );
-					}
-				});
-				return false;
-			});
-		});*/
+    function changeEvent(el) {
+        if (el.fireEvent) {
+            el.fireEvent('onchange');
+        } else {
+            var evObj = document.createEvent("HTMLEvents");
+
+            evObj.initEvent("change", false, true);
+            el.dispatchEvent(evObj);
+        }
+    }
+
+    function trocarIdioma(sigla) {
+        if (comboGoogleTradutor) {
+            comboGoogleTradutor.value = sigla;
+            changeEvent(comboGoogleTradutor);//Dispara a troca
+        }
+    }
+
 		</script>
+		<script>
+			$.validate({
+				lang : 'pt',
+				modules : 'toggleDisabled'
+			});
+		</script>
+		<script>
+			function trocaEfetuada(){
+				var el = document.getElementById("troca");
+				el.innerHTML= "Link Enviado.";
+				el.style.color = "#4CAF50";
+			}
+			function trocaFalha(){
+				var el = document.getElementById("troca");
+				el.innerHTML= "<b>ERRO</b> <br> E-mail não cadastrado!";
+				el.style.color = "#c70000";
+			}
+		</script>
+		<?php
+		session_start();
+			if(isset($_SESSION['Enviado'])){
+				echo "<script>".$_SESSION['Enviado']."</script>";
+				unset($_SESSION["Enviado"]);
+			}
+		?>
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</body>
 </html>

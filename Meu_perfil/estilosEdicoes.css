@@ -1,0 +1,55 @@
+
+		.nomeEditar{
+				display: flex;
+				justify-content: center;
+			}
+			.form-control{
+				width: 60vw;
+			}
+			label{
+				font-size:4em;
+				font-weight: normal;
+				color:#b3b3b3;
+			}
+			.qwe{
+				width: 200px;
+				max-width: 45%;
+				background: rgba(255, 255, 255, 1);
+				border-radius: 5px;
+				box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.07);
+			}
+			.btn {
+				padding: 10px;
+				box-sizing:  border-box;
+				border:  0;
+				margin: 2px;
+				outline:  none;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius:  3px;
+				color:  #555;
+				font-family:  'Roboto', sans-serif;
+				font-size:  14px;
+				cursor:  pointer;
+				opacity:  0.8;
+				transition: opacity 0.2s linear, box-shadow 0.2s linear;
+			}
+			.btn:hover, .btn:focus {
+				opacity:  1;
+				box-shadow: 0px 0px 0px 2px #ececec;
+			}
+			.btn-primary {
+				background-color: #4c6eaf;
+				color:  #fff;
+			}
+			.btn-primary:hover, .btn-primary:focus {
+				box-shadow: 0px 0px 0px 2px rgba(94, 124, 183, 0.45);
+			}
+			.btn-rad {
+				border-radius: 1.5rem;
+			}
+			#voltar{
+				cursor: pointer;
+			}
+			  #google_translate_element {display: none;}
+.goog-te-banner-frame {display: none !important;

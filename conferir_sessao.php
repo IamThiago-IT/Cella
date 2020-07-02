@@ -22,6 +22,7 @@
 	if($existe==1){
 		if($tipo == 1){
 			session_start();
+			//Colaboradores
 			$_SESSION['id_professor'] = $id_professor;
 			$_SESSION['nome_professor'] = $nome;
 			$_SESSION['tipo_usuario'] = $tipo;
@@ -38,6 +39,7 @@
 			
 		}
 		else{
+			// administrador
 			session_start();
 			$_SESSION['id_professor'] = $id_professor;
 			$_SESSION['nome_professor'] = $nome;

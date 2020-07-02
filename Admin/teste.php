@@ -27,24 +27,27 @@
 		<link href="../bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<style type="text/css">
 		   @page {
-				margin: 120px 50px 80px 50px;
+				margin: 100px 0px 70px 0px;
 			}
 			#head{
 				background-color: #035e7f;
 				font-size: 25px;
 				text-align: center;
-				height: 110px;
+				height: 100px;
 				width: 100%;
 				position: fixed;
 				top: -100px;
 				left: 0;
 				right: 0;
 				margin: auto;
+				margin-bottom:100px;
 			}
 			 #corpo{
-				width: 600px;
+				width: 750px;
 				position: relative;
+				top:20px;
 				margin: auto;
+				height:200px;
 			}
 			#footer {
 				position: fixed;
@@ -58,7 +61,7 @@
 			#footer .page:after{ 
 				content: counter(page); 
 			}
-			.logo{width: 150px; height: 85px;}
+			.logo{padding-top:10px ;width: 150px; height: 85px;}
 		</style></head>';
 	$html.= '<body>
 	<div id="head">
@@ -92,11 +95,10 @@
 	$html.= '</table>';
 	$html.= '</main>';
 	$html.= '<br>';
-	$html.= '<img src="' . $_POST['chart_input'] . '">';
 	$html.= '<br>';
-	$html.= '<img src="' . $_POST['note_input'] . '">';
+	$hoje = date('d/m/Y');
 	$footer='<div id="footer">
-            <p class="page">Página </p>
+            <p class="page">'.$hoje.'  Página </p>
         </div>';
 	
 	
@@ -110,7 +112,7 @@
 	$dompdf = new Dompdf();
 	
 	//$dompdf->loadHtml($html);
-	$dompdf->loadHtml('<h1>Relatório de empréstimo de chaves</h1>'.$html.$footer);
+	$dompdf->loadHtml('<h1 style=" text-align: center;">Relatório de empréstimo de chaves</h1>'.$html.$footer);
 	// (Optional) Setup the paper size and orientation
 	$dompdf->setPaper('A4');
 

@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <?php
-	session_start();
-	if(isset($_SESSION['item_salv'])){
-		echo "<script>alert('".$_SESSION['item_salv']."')</script>";
-		unset($_SESSION["item_salv"]);
-	}	
 	include "menu.php";
 	include "../conexao.php";
 		$sql      = "SELECT * FROM tb_produtos WHERE tipo=1";
@@ -15,44 +10,55 @@
 ?>
 <html lang="pt-br">
 	<head>
-	<title>Cella-Lista de Materiais</title>
-	<meta charset="utf-8" />
+		<title>Cella-Lista de Materiais</title>
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
+		<link href="cadastros.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="../style.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+		<script src="../Script/tooltip.js"></script>
 		<style>
-			.glyphicon-duplicate{
+			.glyphicon-duplicate{font-size:30px;color:#000;}
+			.glyphicon-plus{
 				font-size:30px;
 				color:#000;
 			}
-			.btn-icon {
-	color: Red;
-	font-size: 20px;
-                      }
-		  .btn-iconi {
-	color: blue;
-	font-size: 20px;
-                      }
-			
+			.add{
+				position: absolute;
+				right:20px;
+			}
+			.btn-icon {color: Red;font-size: 20px;}
+			.btn-iconi {color: blue;font-size: 20px;}
+			.glyphicon-paperclip {color: #32CD32;font-size: 19px;}
+			.tabela{
+				position: relative;
+				width: 90vw;
+				height: 70vh;
+				overflow-y: scroll;
+				padding:10px;
+			}
+			h2{
+				display:inline-block;
+			}
+			.pdf{
+				position: absolute;
+				right:65px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
-			<div class="col-lg-12" style="margin-top: 5%;">	<!--a href="../Documentacao_BD">Download - Documentação e BD</a-->
+		<main class="principal">
+				<div>
+					<div class="tabela" id="suaDiv">
 				<div class="panel panel-default">
 					<div class="panel-heading" style="width: 100%;">
-					<h2>Lista de Materiais</h2>		<!--............Íncone não aumenta de tamanho...............-->
-						<a href='material_pdf.php' style="width: 25px; height: 25px; position: relative; left:90%; top: -20px" title="Gerar PDF"><span aria-hidden="true" class="glyphicon glyphicon-duplicate"></span></a>
-						<a href='gerente_inserir.php'><img src="imagens/plus.png" title='Adicionar mais materiais' style="width: 25px; height: 25px; position: relative; left:95%; top: -30px" /></a>
+						<h2>Lista de Materiais</h2>
+						<a href='material_pdf.php' target="_blank" id="left" data-toggle="tooltip" data-placement="bottom" title="Gerar PDF" class="pdf"><span aria-hidden="true" class="glyphicon glyphicon-duplicate"></span></a>
+						<a href='admin_inserir.php' id="right" data-toggle="tooltip" data-placement="bottom" title='Adicionar mais materiais' class="add"><span aria-hidden="true" class="glyphicon glyphicon-plus"></span></a>
 					</div>
 					<!-- /.panel-heading -->
 					<!-- Tabela -->
@@ -65,6 +71,7 @@
 									<th>Quantidade<br>em estoque</th>
 									<th>Estoque mínimo</th>
 									<th>Obs</th>
+									<th>Retirada</th>
 									<th>Editar</th>
 									<th>Excluir</th>
 								</tr>
@@ -78,13 +85,20 @@
 												$qntde      = $estoque['qntde'];
 												$minimo     = $estoque['estoque_min'];
 												$obs        = $estoque['obs'];
-												$tipo        = $estoque['tipo'];
+												$tipo       = $estoque['tipo'];
+												$saida      = "<a href='saidas.php?id=$id_produto&nome=$nome&qntde=$qntde&minimo=$minimo' 
+												title='Retirar $nome?'><i class='glyphicon glyphicon-paperclip'></i></a>";
 												$editar     = "<a href='produtos_editar.php?id=$id_produto' 
 												title='Editar $nome?'>
 													<i class='fas fa-edit btn-iconi'></i>
 												</a>";
-												$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_produto' data-target='$nome' title='Excluir $nome ?'><i class='fas fa-trash-alt btn-icon'></i></a>";
-												echo "<tr><td>$nome</td><td>$medidas</td><td>$qntde</td><td class='center'>$minimo</td><td>$obs</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
+												$excluir = "<a id='delete-row' href='#' aria-hidden='true' data-id='$id_produto' data-target='$nome'  title='Excluir $nome ?'><i class='fas fa-trash-alt btn-icon'></i></a>";
+												if($qntde <= $minimo){
+													echo "<tr style='border:1px solid #fe0101;background-color:#f4b8b8; color:#fff;'><td>$nome</td><td>$medidas</td><td>$qntde</td><td class='center'>$minimo</td><td>$obs</td><td align='middle'>$saida</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
+												}
+												else{
+													echo "<tr><td>$nome</td><td>$medidas</td><td>$qntde</td><td class='center'>$minimo</td><td>$obs</td><td align='middle'>$saida</td><td align=middle>$editar</td><td align=middle>$excluir</td></tr>";
+												}
 												
 											}
 									?>
@@ -93,11 +107,12 @@
 					</div>
 					<!-- /.panel-body -->
 				</div>
-				<!-- /.panel -->
+				</div>
 			</div>
-			<!-- /.col-lg-12 -->
-		</div>
-				  <!-- /#page-wrapper -->
+		</main>
+		<main class="rodape">
+			© Copyright 2019-2020
+		</main>
 		 <!-- /#wrapper -->
 
 		<!-- jQuery -->
@@ -118,44 +133,83 @@
 		<script src="../bootstrap/dist/js/sb-admin-2.js"></script>
 
 		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-		<footer class="sticky-footer bg-white"> 
-			<div class="container my-auto"> 
-				<div class="copyright text-center my-auto">
-					<span>Copyright © Your Website 2019</span>
-				</div>
-			</div>
-		</footer>
-		
-	</body>
-	<script>
-    $("a#delete-row").click(function(){
-        var id = $(this).attr("data-id");
-		var nome = $(this).attr("data-target");
-
-
-        if(confirm('Apagar este registro ?'+ nome))
-        {
-            $.ajax({
-               url: 'apagar_chaves.php',
-               type: 'POST',
-               data: {id_teste: id},
-               error: function() {
-                  alert('Something is wrong');
-               },
-               success: function(data) {
-                    $("#"+id).remove(); 
-					 location.reload();
-               }
-            });
-        }
-    });
-
-		$(document).ready(function() {
-			$('#dataTables-example').DataTable({
-				responsive: true
+		<script>
+			$("a#delete-row").click(function(){
+				var id = $(this).attr("data-id");
+				var nome = $(this).attr("data-target");
+				
+				alertify.confirm('Apagar este registro: '+ nome+' ?').set('onok', function(closeEvent)
+				{
+					$.ajax({
+					   url: 'apagar_chaves.php',
+					   type: 'POST',
+					   data: {id_teste: id},
+					   error: function() {
+						  alert('Something is wrong');
+					   },
+					   success: function(data) {
+							$("#"+id).remove(); 
+							 location.reload();
+					   }
+					});
+				} );
 			});
-		});
+
+				$(document).ready(function() {
+					$('#dataTables-example').DataTable({
+						responsive: true
+					});
+				});
 		</script>
-	
-	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mouse0270-bootstrap-notify/3.1.5/bootstrap-notify.min.js" ></script>
+		<link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script>
+		//alert
+			function successClick(){
+				  $.notify({
+					// options
+					title: '<strong>Material salvo com sucesso</strong>',
+					message: "",
+				  icon: 'glyphicon glyphicon-ok',
+					url: 'https://github.com/mouse0270/bootstrap-notify',
+					target: '_blank'
+				},{
+					// settings
+					element: 'body',
+					//position: null,
+					type: "success",
+					//allow_dismiss: true,
+					//newest_on_top: false,
+					showProgressbar: false,
+					placement: {
+						from: "top",
+						align: "right"
+					},
+					offset: 20,
+					spacing: 10,
+					z_index: 1031,
+					delay: 3300,
+					timer: 1000,
+					url_target: '_blank',
+					mouse_over: null,
+					animate: {
+						enter: 'animated fadeInDown',
+						exit: 'animated fadeOutRight'
+					},
+					onShow: null,
+					onShown: null,
+					onClose: null,
+					onClosed: null,
+					icon_type: 'class',
+				});
+			}
+		</script>
+		<?php
+			session_start();
+			if(isset($_SESSION['item_salv'])){
+				echo "<script>".$_SESSION['item_salv']."</script>";
+				unset($_SESSION["item_salv"]);
+			}
+		?>
+	</body>
 </html>

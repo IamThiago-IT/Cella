@@ -9889,7 +9889,7 @@
 		 *      } );
 		 *    } );
 		 */
-		"aaSorting": [[0,'asc']],
+		"aaSorting": [[4,'asc']],                                     //PULO DO GATO 
 	
 	
 		/**

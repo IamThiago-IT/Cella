@@ -15,12 +15,12 @@
 		//Chaves
 		  google.load('visualization', '1.0', {'packages':['corechart']});
 		  google.setOnLoadCallback(function(){
-			var json_text = $.ajax({url: "grafico/note_mais_pegado.php", dataType:"json", async: false}).responseText;
+			var json_text = $.ajax({url: "grafico/chaves_mais_emp.php", dataType:"json", async: false}).responseText;
 			var json = eval("(" + json_text + ")");
 			var dados = new google.visualization.DataTable(json.dados);
 			var chart_div = document.getElementById('area_grafico');
 			var chart_input = document.getElementById('chart_input');
-			var chart = new google.visualization.PieChart(document.getElementById('area_grafico'));
+			var chart = new google.visualization.pieHole(document.getElementById('area_grafico'));
 			google.visualization.events.addListener(chart, 'ready', function () {
 				chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
 				chart_input.value = chart.getImageURI();

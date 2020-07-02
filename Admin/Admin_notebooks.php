@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <?php
-	session_start();
-	if(isset($_SESSION['msgMarca'])){
-		echo "<script>alert('".$_SESSION['msgMarca']."')</script>";
-		unset($_SESSION["msgMarca"]);
-	}	
+	include "menu.php";
 	include "../conexao.php";
 	$sql      = "SELECT tb_produtos.*,tb_emprestimos.* FROM tb_produtos
 	LEFT JOIN tb_emprestimos ON tb_produtos.id_produto = tb_emprestimos.fk_produto
 	WHERE tb_produtos.tipo =3 ";		//AND tipo= 1
 	$materiais = $fusca -> prepare($sql);
 	$materiais -> execute();
-	include "menu.php";	
-	if(isset($_POST['Salvar'])){
-		session_start();
-		$id                  = $_POST['id'];
-		$n_sala              = $_POST['nome_note'];
-		$medidas             = $_POST['medidas'];
-		$qntde               = $_POST['quantidade'];
-		$minimo              = $_POST['minimo'];
-		$rtvl                = 1;
-		$obs                 = $_POST['obs'];
-		$tipo                = 3;
-		$_SESSION['id']         = $id;
-		$_SESSION['nome']     = $n_sala;
-		$_SESSION['medidas']    = $medidas;
-		$_SESSION['quantidade'] = $qntde;
-		$_SESSION['minomo']     = $minimo;
-		$_SESSION['rtvl']       = $rtvl;
-		$_SESSION['obs']        = $obs;
-		$_SESSION['tipo']       = $tipo;
-		echo "<script>window.location.href = 'conferir_chaves.php'</script>";
-	}
 ?>
 <html lang="pt-br">
 	<head>
-	<title>Cella-Notebooks</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<title>Cella - Lista de Notebook</title>
+		<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
+		<link href="cadastros.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+		<link rel="sortcut icon" href="../img/shortcut_cella.png" type="image/png" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-				<link rel="stylesheet" href="../style.css">
+		<script src="../Script/tooltip.js"></script>
+		<style>
+			.tabela{
+				position: relative;
+				width: 90vw;
+				height: 70vh;
+				overflow-y: scroll;
+				padding:10px;
+			}
+			h2{
+				display:inline-block;
+			}
+			.add{
+				position: absolute;
+				right:20px;
+			}
+			.glyphicon-plus{
+				font-size:30px;
+				color:#000;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="row" style="position:relative; margin-top: 2%; margin-left: 3%; margin-right: 5%;">
-			<div class="col-lg-12" style="margin-top: 5%;">	
+		<main class="principal">
+				<div>
+					<div class="tabela" id="suaDiv">
+			<!--Começo da tabela-->
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h2>Notebooks</h2>
-						<a href='#' data-toggle='modal' data-target='#basicModal'><img src="imagens/plus.png" title='Adicionar mais materiais' style="width: 25px; height: 25px; position: relative; left:95%; top: -30px"  /></a>
+						<a href='#' data-toggle='modal' data-target='#basicModal' id="left" data-toggle="tooltip" data-placement="bottom" title='Adicionar mais notebooks' class="add"><span aria-hidden="true" class="glyphicon glyphicon-plus"></span></a>
 						<div class='modal fade' id='basicModal' tabindex='-1' role='dialog' aria-labelledby='basicModal' aria-hidden='true'>
 							<div class='modal-dialog'>
 								<div class='modal-content'>
@@ -64,17 +58,18 @@
 										<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
 										<h4 class='modal-title' id='myModalLabel'>Cadastro de notebooks</h4>
 									</div>
+									<!-- cadastro de notebook-->
 									<form action="conferir_notebooks.php" method="POST">
 										<div class='modal-body'>
 										<div class="form-group">
-											<input type="number" min="0" class="form-control input-lg"  name="nome_note" placeholder="Número do notebooks" required>
+											<input type="number" min="0" max="100" class="form-control input-lg"  name="nome_note" placeholder="Número do notebooks"  data-validation="length number" data-validation-length="max3" data-validation-allowing="int">
 										</div>
 											
 											<div class="form-group">
-												<input type="number" min="0" class="form-control input-lg"  name="medidas" placeholder="Número de patrimônio" required>
+												<input type="number" min="0" class="form-control input-lg"  name="medidas" placeholder="Número de patrimônio"  data-validation="number" data-validation-allowing="range[1;1000000000000]">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control input-lg" name="obs" placeholder="Modelo" required>
+												<input type="text" class="form-control input-lg" name="obs" placeholder="Modelo" data-validation="required alphanumeric" data-validation-ignore="._   /çÇéÉáàÁÀíóôÓÍ()">
 											</div>
 											
 											<input type="hidden" name="quantidade">											
@@ -82,11 +77,12 @@
 											<input type="hidden"  name="id">											
 										</div>
 										<div class='modal-footer'>
-											<button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>
 											<input type="submit" class='btn btn-default' name="Salvar" value="Salvar">
+											<button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>
 											<!-- TERMINA MODAL -->
 										</div>
 									</form>
+									<!---FIm cadastro-->
 								</div>
 							</div>
 						</div>
@@ -103,6 +99,7 @@
 									<th>Excluir</th>
 								</tr>
 							</thead>
+							<tbody>
 								<?php
 									foreach($materiais as $lista){
 										$id_produto    =  $lista['id_produto'];
@@ -112,22 +109,22 @@
 										$tipo          =  $lista['tipo'];
 										$id_chave   =  $lista['fk_produto'];
 										if($id_produto == $id_chave){
-											$editar = "#";
-											$excluir = "#";
-											//$emp = "#";
+											$editar = "<a href='#' 
+												title='Editar $nome_note inativado.'>
+													<i style='color:#CCC;' class='fas fa-edit btn-iconi'></i>
+												</a>";
+											$excluir = "<a href='#' title='Excluir $nome_note inativado.'><i style='color:#CCC;' class='fas fa-trash-alt btn-icon'></a></a>";
 										}
 										else{
 											$editar     = "<a href='editar_notebooks.php?id=$id_produto' 
 												title='Editar notebook $nome_note ?'>
-													<img src='imagens/editar.png' width='25px'>
+													<i class='fas fa-edit btn-iconi'></i>
 												</a>";
-											//$emp = "<a href='emp_chaves.php?id=$id_produto&tipo=$tipo&nome=$nome_note&pagina=gerente_notebooks'><span class='glyphicon glyphicon-plus'></span></a>";
-											$excluir = "<a id='delete-row' href='#' data-id='$id_produto' data-target='$nome_note' title='Excluir $nome_note ?'><img src='imagens/trash.png' width='25px'></a>";
+											$excluir = "<a id='delete-row' href='#' data-id='$id_produto' data-target='$nome_note' title='Excluir $nome_note ?'><i class='fas fa-trash-alt btn-icon'></a>";
 										}
 										echo "<tr><td>$nome_note</td><td>$n_patrimonio</td><td>$modelo</td><td  align=middle>$editar</td><td  align=middle>$excluir</td></tr>";
 									}
 								?>
-							<tbody>
 								
 							</tbody>
 						</table>
@@ -135,9 +132,9 @@
 					<!-- /.panel-body -->
 				</div>
 				<!-- /.panel -->
+				</div>
 			</div>
-			<!-- /.col-lg-12 -->
-		</div>
+		</main>
 				  <!-- /#page-wrapper -->
 		 <!-- /#wrapper -->
 
@@ -167,37 +164,122 @@
 			});
 		});
 		</script>
-				<footer class="sticky-footer bg-white"> 
-			<div class="container my-auto"> 
-				<div class="copyright text-center my-auto">
-					<span>Copyright © Your Website 2019</span>
-					<!--img src="../img/Senai_-_AZUL.jpg" style="position: absolute; top:95.5%;right:5%; width: 25%; height:5.5%;"-->
-				</div>
-			</div>
-		</footer>
+		<main class="rodape">
+			© Copyright 2019-2020
+		</main>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mouse0270-bootstrap-notify/3.1.5/bootstrap-notify.min.js" ></script>
+		<link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script>
+		function successClick(){
+			  $.notify({
+				// options
+				title: '<strong>Notebook salvo com sucesso</strong>',
+				message: "",
+			  icon: 'glyphicon glyphicon-ok',
+				url: 'https://github.com/mouse0270/bootstrap-notify',
+				target: '_blank'
+			},{
+				// settings
+				element: 'body',
+				//position: null,
+				type: "success",
+				//allow_dismiss: true,
+				//newest_on_top: false,
+				showProgressbar: false,
+				placement: {
+					from: "top",
+					align: "right"
+				},
+				offset: 20,
+				spacing: 10,
+				z_index: 1031,
+				delay: 3300,
+				timer: 1000,
+				url_target: '_blank',
+				mouse_over: null,
+				animate: {
+					enter: 'animated fadeInDown',
+					exit: 'animated fadeOutRight'
+				},
+				onShow: null,
+				onShown: null,
+				onClose: null,
+				onClosed: null,
+				icon_type: 'class',
+			});
+		}
+		function dangerClick(){
+			  $.notify({
+				// options
+				title: '<strong>Erro</strong>',
+				message: "<br>Número de Notebook já cadastrado.",
+			  icon: 'glyphicon glyphicon-remove-sign',
+			},{
+				// settings
+				element: 'body',
+				position: null,
+				type: "danger",
+				allow_dismiss: true,
+				newest_on_top: false,
+				showProgressbar: false,
+				placement: {
+					from: "top",
+					align: "right"
+				},
+				offset: 20,
+				spacing: 10,
+				z_index: 1031,
+				delay: 3300,
+				timer: 1000,
+				url_target: '_blank',
+				mouse_over: null,
+				animate: {
+					enter: 'animated flipInY',
+					exit: 'animated flipOutX'
+				},
+				onShow: null,
+				onShown: null,
+				onClose: null,
+				onClosed: null,
+				icon_type: 'class',
+			});
+		}
+			$.validate({
+				modules : 'toggleDisabled',
+				lang: 'pt'
+			});
+		</script>
+		<?php
+		session_start();
+			if(isset($_SESSION['msgMarca'])){
+				echo "<script>".$_SESSION['msgMarca']."</script>";
+				unset($_SESSION["msgMarca"]);
+			}
+			?>
+		<script>
+			$("a#delete-row").click(function(){
+				var id = $(this).attr("data-id");
+				var nome = $(this).attr("data-target");
 
-	
+				//if(alertify.confirm('Apagar este registro'+ nome+' ?', function(){ alertify.success('Ok') }, function(){ alertify.error('Cancel')})){
+				alertify.confirm('Apagar este registro: '+ nome+' ?').set('onok', function(closeEvent){
+					$.ajax({
+					   url: 'apagar_chaves.php',
+					   type: 'POST',
+					   data: {id_teste: id},
+					   error: function() {
+						  alert('Something is wrong');
+					   },
+					   success: function(data) {
+							$("#"+id).remove(); 
+							location.reload();
+					   }
+					});
+				} );
+					
+				//}
+			});
+		</script>
 	</body>
-	<script>
-    $("a#delete-row").click(function(){
-        var id = $(this).attr("data-id");
-		var nome = $(this).attr("data-target");
-
-        if(confirm('Apagar este registro ?'+ nome))
-        {
-            $.ajax({
-               url: 'apagar_chaves.php',
-               type: 'POST',
-               data: {id_teste: id},
-               error: function() {
-                  alert('Something is wrong');
-               },
-               success: function(data) {
-                    $("#"+id).remove(); 
-					 location.reload();
-               }
-            });
-        }
-    });
-	</script>
 </html>

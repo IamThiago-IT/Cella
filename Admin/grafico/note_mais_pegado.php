@@ -1,6 +1,6 @@
 <?php
 try{ //tente
-		$fusca = new PDO("mysql:host=localhost;dbname=modain69_cella","modain69_cella","cella123");
+		$fusca = new PDO("mysql:host=localhost;dbname=u513475005_cella","u513475005_cella123","maria34");
 		//echo "Conexão efetuada com sucesso";
 	} 
 	catch(PDOException $e){ //Bloco correspondente ao try	
@@ -27,7 +27,7 @@ $grafico = array(
         'rows' => array()
     ),
     'config' => array(
-        'title' => 'Gráfico da quantidade de chaves que estão emprestadas e que estão no almoxarifado',
+        'title' => 'Gráfico da porcentagem de notebooks que estão emprestados e que estão no almoxarifado',
         'width' => 500,
         'height' => 400
     )

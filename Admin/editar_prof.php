@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+	session_start();
 	include "menu.php";
 	include "../conexao.php";
 	$id     =  $_GET['id'];
@@ -21,12 +22,18 @@
 		$nome_edit    = $_POST['nome'];
 		$numero_edit  = $_POST['numero'];
 		$casa_edit   = $_POST['casa'];
-		$sql4 = "SELECT numero FROM tb_professores WHERE numero = '$numero_edit' AND id_professor <> '$id'";
+		//confere se o número de matrícula é exitente
+		$sql4 = "SELECT numero FROM tb_professores WHERE numero = '$numero_edit' AND tipo_usuario <> 5 AND id_professor <> '$id'";
 		$numex = $fusca -> prepare($sql4);
 		$numex-> execute();
 		$existe = $numex->rowCount();
-		if($existe == 1){
-			echo "<script>alert('Número de matrícula já existente');</script>";
+		//confere so o nome do usuário é existente
+		$sql5 = "SELECT nome_professor, id_professor FROM tb_professores WHERE nome_professor = '$nome_edit' AND tipo_usuario <> 5 AND id_professor != $id";
+		$nomex = $fusca -> prepare($sql5);
+		$nomex-> execute();
+		$existeNome = $nomex->rowCount();
+		if($existe == 1 || $existeNome == 1){
+			echo "<script>alertify.error('Erro, nome de usuário ou número de matrícula já existentes.');</script>";
 		}
 		else{
 			$sql2  = "UPDATE tb_professores SET
@@ -36,8 +43,7 @@
 			WHERE id_professor = ?";
 			$editar  = $fusca -> prepare($sql2);
 			$editar -> execute(array($nome_edit,$numero_edit,$casa_edit,$id));
-			session_start();
-			$_SESSION['cadas_n'] = "Professor Editado";
+			$_SESSION['cadas_n'] = "alertify.success('Professor editado com sucesso');";
 			echo "<script>window.location.href = 'colaboradores.php' </script>";
 		}
 	}
@@ -46,39 +52,36 @@
 	?>
 <html lang="PT-BR">
 	<head>
-		<title>Cella - Editar Professor</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Cella">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		<link href="../bootstrap/vendor/bootstrap/css/botoes.css" rel="stylesheet">
-		<link href="../bootstrap/vendor/bootstrap/css/divs.css" rel="stylesheet"> 
-    </head>
+		<title>Cella - Editar Produtos</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="cadastros.css" rel="stylesheet">
+   </head>
 	<body>
-		<br>
-		<br>
-		<div class="container" style="width:1000px">
-			<div class="row">
-				<div class="col-lg-12">
-					<form action='' method='POST' autocomplete='off'>
-						<h1 align='center'>Editar Professor <?php echo $nome; ?></h1>
+		<main class="principal">
+			<div>
+				<div class="conteudo" id="suaDiv">
+					<div class="col-lg-12">
+					<!--Formulário para cadastro de professores--->
+					<form action='#' method='POST' autocomplete='off'>
+						<h1 align='left'>Editar Professor(a): <?php echo $nome; ?></h1>
 						<br>
-						<div class="form-group">
-							<input type='text' class="form-control input-lg" name='nome' value='<?php echo $nome;?>' placeholder="Nome" required autofocus><br>
+						<div class="form-group col-md-12">
+							<label>Nome do Usuário:</label>
+							<input type='text' class="form-control input-lg" name='nome' value='<?php echo $nome;?>' placeholder="Nome" data-validation="required alphanumeric" data-validation-ignore="._   /çÇéêÉáàÁÀíóôÓÍãõÃÕ()"  autofocus><br>
 						</div>
-						<div class="form-row">
-								<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:2%; padding-left:0px; padding-top:0px; padding-down:0px;" >
-								<label>Número de matrícula:</label>
-								<input type='number' min='1' name='numero' value="<?php echo $numero;?>" class="form-control input-lg" placeholder="Número de matrícula" required ><br>
-								</div>
-								<div class="form-group col-md-6" style="border: none; min-height:0px; padding-right:0px; padding-left:0px; padding-top:0px; padding-down:0px;">
-									<label>Casa:</label>
-									<select class="form-control input-lg" name="casa"><br>
+						<div class="form-group col-md-6">
+							<label>Número de matrícula:</label>
+							<input type='number' min='1' name='numero' value="<?php echo $numero;?>" class="form-control input-lg" placeholder="Número de matrícula" data-validation="number length" data-validation-length="4-5" data-validation-allowing="int"><br>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Casa:</label>
+							<select class="form-control input-lg" name="casa"><br>
 									<?php
 										foreach($sqlcasa as $u){
 											$id_casa   = $u['id_casa'];
@@ -89,16 +92,19 @@
 												echo "<option value='$id_casa'>".$toda_casa."</option>";
 										}
 									?>
-									</select>
-								</div>
-							</div>
-							<button type="button" class="btn-default btn-lg btn-block" data-toggle="modal" data-target="#exampleModa2">
+							</select>
+						</div>
+							<div class="form-group col-md-3" style="border: none; min-height:0px;" >
+							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#exampleModa2">
 							  Voltar
 							</button>
+							</div>
 							<!-- Button trigger modal -->
+							<div class="form-group col-md-3" style="border: none; min-height:0px;">
 							<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
 							  Editar
 							</button>
+							</div>
 
 							<!-- Modal -->
 							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -133,15 +139,27 @@
 									O item <?php echo "$nome"?> não será salvo?
 								  </div>
 								  <div class="modal-footer">
-									<input type="submit" class="btn btn-default btn-lg btn-block" value="Voltar" name="Voltar">
+									<button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">Retornar</button>
 										<a href="colaboradores.php" class="btn btn-primary btn-lg btn-block">Continuar</a>
 								  </div>
 								</div>
 							  </div>
-							</div>														
+							</div>											
 					</form>
 				</div>
+				</div>
 			</div>
-		</div>
-	</body>
+		</main>
+		<main class="rodape">
+			© Copyright 2019-2020
+		</main>
+	</body>	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+	<script>
+	$.validate({
+				modules : 'toggleDisabled',
+				lang: 'pt'
+			});
+	</script>
 </html>		

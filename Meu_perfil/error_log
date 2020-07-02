@@ -1,0 +1,13 @@
+[05-May-2020 17:25:52 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/modain69/public_html/cella/Meu_perfil/p_pagina.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/modain69/public_html/cella/Meu_perfil/p_pagina.php on line 12
+[07-May-2020 16:09:12 America/Fortaleza] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home2/modain69/public_html/cella/Meu_perfil/editar_senha2.php on line 85
+[07-May-2020 16:22:53 America/Fortaleza] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home2/modain69/public_html/cella/Meu_perfil/editar_senha2.php on line 85
+[07-May-2020 16:23:09 America/Fortaleza] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home2/modain69/public_html/cella/Meu_perfil/editar_senha2.php on line 85
+[15-Jun-2020 14:44:51 America/Fortaleza] PHP Parse error:  syntax error, unexpected ''numero' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home2/modain69/public_html/cella/Meu_perfil/menu_perfil.php on line 9
+[15-Jun-2020 14:49:26 America/Fortaleza] PHP Parse error:  syntax error, unexpected '?>' in /home2/modain69/public_html/cella/Meu_perfil/p_pagina.php on line 126
+[15-Jun-2020 14:49:30 America/Fortaleza] PHP Parse error:  syntax error, unexpected '?>' in /home2/modain69/public_html/cella/Meu_perfil/p_pagina.php on line 126
+[15-Jun-2020 14:49:33 America/Fortaleza] PHP Parse error:  syntax error, unexpected '?>' in /home2/modain69/public_html/cella/Meu_perfil/p_pagina.php on line 126
+[15-Jun-2020 14:49:38 America/Fortaleza] PHP Parse error:  syntax error, unexpected '?>' in /home2/modain69/public_html/cella/Meu_perfil/p_pagina.php on line 126
+[15-Jun-2020 14:56:08 America/Fortaleza] PHP Parse error:  syntax error, unexpected end of file in /home2/modain69/public_html/cella/Meu_perfil/editar_senha.php on line 9

@@ -1,27 +1,18 @@
-?php
-include "../conexao.php";
+<?php
+	include "../conexao.php";
 	session_start();
-	if($_SESSION["abrir"]!="YES"){
-		header('location:../index.php');
-	}
 	$id_professor = $_SESSION['id_professor'];
 	$professor = $_SESSION['nome_professor'];
 	$numero = $_SESSION['numero'];
 	$tipo = $_SESSION['tipo_usuario'];
 	$senha = $_SESSION['senha_professor'];
+	$email = $_SESSION['email'];
+	$img   = $_SESSION['img'];
 	$sql = "SELECT * FROM tipo_user WHERE tipo_usuario = $tipo "; 
 	$materiais = $fusca -> prepare($sql);
 	$materiais -> execute();
 	foreach($materiais as $material){
 		$user = $material['nome_usuario'];
-	}
-	$sql1 = "SELECT email,img FROM `tb_professores` WHERE id_professor = '$id_professor'";
-	$email = $fusca -> prepare($sql1);
-	$email -> execute();
-	
-	foreach($email as $e){
-		$mail = $e['email'];
-		$img  = $e['img'];
 	}
 ?>
 	<head>
@@ -118,9 +109,8 @@ include "../conexao.php";
 	</head>	
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
 					<center>
-					<form action="carrega.php" method="POST" enctype="multipart/form-data" id="formulario">
-						<div class="circle">
-							<!--<img src="https://vignette.wikia.nocookie.net/zelda/images/5/57/Breath_of_the_Wild_Artwork_Link_%28Official_Artwork%29.png/revision/latest/scale-to-width-down/340?cb=20160623185226">-->
+					<form action="carrega.php" method="POST" enctype="multipart/form-data" id="formulario"> <!--Form para imagem do perfil-->
+						<div class="circle">				
 							<?php
 								if($img == NULL){
 									echo "<img src='imagens/user.png'>";
@@ -131,8 +121,8 @@ include "../conexao.php";
 							?>
 							<div class="text">
 								<p>
-									<label for='tucano'>Editar</label>
-									<input id='tucano' type='file' name="tucano" onchange="enviaForm()">
+									<label for='tucano' style="color: black;">Editar</label>
+									<input id='tucano' type='file' name="tucano" onchange="enviaForm(this.value)">
 									<input type="hidden" name="id" id="id" value="<?php echo $id_professor;?>">
 								</p>
 							</div>
@@ -142,7 +132,7 @@ include "../conexao.php";
 					<hr>
 					<div class="alinhamento"><!---Div de alinhamento no centro-->
 						<div class="meuPerfil">
-							<p>Perfil</p>
+							<p style="padding-left: 10px;">Perfil</p>
 							<article class="nome">
 								Nome <b><?php echo $professor;?></b><span class="glyphicon glyphicon-chevron-right"></span>
 							</article>
@@ -150,10 +140,10 @@ include "../conexao.php";
 								Número<b><?php echo $numero;?></b><span class="glyphicon glyphicon-chevron-right"></span>
 							</article>
 							<article class="contato">
-								Contato<b><?php echo $mail;?></b><span class="glyphicon glyphicon-chevron-right"></span>
+								Contato<b><?php echo $email;?></b><span class="glyphicon glyphicon-chevron-right"></span>
 							</article>
 							<?php
-							echo "<a href='editar_senha.php?id=$id_professor&nome=$professor'>
+							echo "<a href='editar_senha.php'>
 									<article class='senha' style='color:#333;'>
 										Senha<b>••••••••</b><span class='glyphicon glyphicon-chevron-right'></span>
 									</article>
@@ -180,7 +170,16 @@ include "../conexao.php";
 						$("#suaDiv").load('editar_contato.php');     
 					  });
 					});
-					function enviaForm() {
-					  document.getElementById("formulario").submit();
+					function enviaForm(valor){
+					    var res = valor.split(".");
+					    if(res[1] == 'png' || res[1] == 'jpeg' || res[1] == 'jpg'){
+							formEnviar();
+						}
+						else{
+							alert("Formato do arquivo incorreto.");
+						}
+					}
+					function formEnviar(){
+						document.getElementById("formulario").submit();
 					}
 				</script>

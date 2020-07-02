@@ -6,7 +6,6 @@
 body {
   background-color: #f8f8f8;
 }
-
 #wrapper {
   width: 99%;
 }
@@ -196,12 +195,12 @@ table.dataTable thead .sorting_desc:after {
   float: right;
   font-family: fontawesome;
 }
-table.dataTable thead .sorting:after {
+/*table.dataTable thead .sorting:after {
   content: "\f0dc";
   float: right;
   font-family: fontawesome;
   color: rgba(50, 50, 50, 0.5);
-}
+}*/
 .btn-circle {
   width: 30px;
   height: 30px;
